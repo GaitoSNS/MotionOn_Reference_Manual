@@ -1,0 +1,325 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Webcams, Mini DV, and HDMI capture cards &mdash; MotionON 0.9.5 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/motionon.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Network cameras and smartphones" href="network.html" />
+    <link rel="prev" title="Supported cameras and options" href="../hardware.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #404040" >
+          
+
+          
+            <a href="../../index.html">
+          
+
+          
+            
+            <img src="../../_static/motionon.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">User interface</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../userinterface/overview.html">Main window user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../userinterface/workspaces.html">Workspaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../userinterface/instances.html">Running multiple instances of MotionON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../userinterface/preferences.html">Preference pages</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Observation and comparison</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../observation/loading.html">Loading videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../observation/playback_ui.html">Playback screen user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../observation/image_geometry.html">Image transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../observation/time_calibration.html">Time calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../observation/comparison.html">Comparison and synchronization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../observation/overview.html">Overview mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../observation/reverse.html">Reverse mode</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Annotation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../annotation/general.html">Annotating videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../annotation/tools.html">List of tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../annotation/style_and_opacity.html">Style and opacity of drawings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../annotation/time_origin.html">Time origin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../annotation/importing_images.html">Importing images and vector drawings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../annotation/annotation_files.html">Saving and loading annotation files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../annotation/importing_data.html">Importing external data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Measurement</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../measurement/calibration.html">Calibration mechanisms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../measurement/guidelines.html">Guidelines to minimize errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../measurement/coordinatesystem.html">Coordinate system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../measurement/lensdistortion.html">Lens distortion calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../measurement/time.html">Measuring time</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../measurement/distance.html">Measuring positions and distances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../measurement/angle.html">Measuring angles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../measurement/trajectory.html">Tracking point trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../measurement/tracking.html">Tracking distances and angles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../measurement/kinematics.html">Linear and angular kinematics</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Capture</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../listing.html">Listing and opening cameras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface.html">Capture screen user interface</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../hardware.html">Supported cameras and options</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Webcams, Mini DV, and HDMI capture cards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="network.html">Network cameras and smartphones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="industrial.html">Machine vision and industrial cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulator.html">Camera simulator</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../livedelay.html">Live delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../recording.html">Recording</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../replay.html">Replay folder observers</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Export</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../export/video.html">Exporting video and images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../export/data.html">Exporting data and measurements</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellaneous topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/faq.html">Frequently asked questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/update.html">Software update</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/command_line.html">Command line options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/copydata.html">Control from other applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/comms.html">Communication channels</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">MotionON</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../hardware.html">Supported cameras and options</a> &raquo;</li>
+        
+      <li>Webcams, Mini DV, and HDMI capture cards</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="webcams-mini-dv-and-hdmi-capture-cards">
+<h1>Webcams, Mini DV, and HDMI capture cards<a class="headerlink" href="#webcams-mini-dv-and-hdmi-capture-cards" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="general">
+<h2>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
+<p>MotionON supports devices with a DirectShow driver.
+These devices include USB video class (UVC) webcams, Mini DV camcorders, and analog video converters.</p>
+</div>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/config-webcam.png" src="../../_images/config-webcam.png" />
+<p>The exact list of available options depends on the camera.</p>
+<div class="section" id="stream-format">
+<h3>Stream format<a class="headerlink" href="#stream-format" title="Permalink to this headline">¶</a></h3>
+<p>The avalaible stream formats depend on the brand and model of the camera.</p>
+<p>The typical stream formats include:</p>
+<ul class="simple">
+<li><p><span class="guilabel">RGB</span>, <span class="guilabel">RGB24</span>, <span class="guilabel">RGB32</span>: the images are not compressed.</p></li>
+<li><p><span class="guilabel">YUV</span>, <span class="guilabel">YCbCr</span>, <span class="guilabel">YUY2</span>, <span class="guilabel">I420</span>: the images are not compressed.</p></li>
+<li><p><span class="guilabel">MJPEG</span>: the images are compressed on the camera.</p></li>
+</ul>
+<p>Using the <span class="guilabel">MJPEG</span> stream format can lower the bandwidth requirements and improve framerate.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>MotionON native storage format for compressed videos is MJPEG. When using this stream format, the videos are saved as-is without any extra decompression or compression steps.</p>
+</div>
+</div>
+<div class="section" id="image-size">
+<h3>Image size<a class="headerlink" href="#image-size" title="Permalink to this headline">¶</a></h3>
+<p>This defines the image size of the stream and impacts the available options in the framerate dropdown.</p>
+</div>
+<div class="section" id="framerate">
+<h3>Framerate<a class="headerlink" href="#framerate" title="Permalink to this headline">¶</a></h3>
+<p>This is the list of framerates available for the selected image size.</p>
+</div>
+<div class="section" id="exposure">
+<h3>Exposure<a class="headerlink" href="#exposure" title="Permalink to this headline">¶</a></h3>
+<p>This value is related to the amount of time the sensor is exposed.</p>
+<p>Changing the exposure duration lets you find a tradeoff between motion blur and light requirements.
+Lowering the exposure duration reduces motion blur and increases the amount of light required to capture the scene.</p>
+<p>For most cameras brands, the unit of this value is not known and it is exposed as an arbitrary number.
+For some camera brands the value is shown in milliseconds if a special property is exposed by the driver or the values where derived manually.</p>
+<p>This value is a limiting factor for the framerate. If this value is too high the framerate is lowered automatically by the camera.</p>
+</div>
+<div class="section" id="gain">
+<h3>Gain<a class="headerlink" href="#gain" title="Permalink to this headline">¶</a></h3>
+<p>This is the amount of amplification of the signal captured on the sensor.
+Increasing this value increases the apparent brightness but can introduce noise in the image.</p>
+<p>This value has no impact on the framerate.</p>
+</div>
+<div class="section" id="focus">
+<h3>Focus<a class="headerlink" href="#focus" title="Permalink to this headline">¶</a></h3>
+<p>This drives motorized lenses to adjust focus.</p>
+</div>
+<div class="section" id="other-options">
+<h3>Other options<a class="headerlink" href="#other-options" title="Permalink to this headline">¶</a></h3>
+<p>Options that are not supported in MotionON can be modified using the <span class="guilabel">Device property pages</span> button.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="network.html" class="btn btn-neutral float-right" title="Network cameras and smartphones" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../hardware.html" class="btn btn-neutral float-left" title="Supported cameras and options" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2025, MotionON documentation authors (Cited Source: Kinovea documentation Authours, Credits CC0 1.0).
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

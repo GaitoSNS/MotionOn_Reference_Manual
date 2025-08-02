@@ -1,0 +1,554 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Playback &mdash; MotionON 0.9.5 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/motionon.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Drawings" href="drawings.html" />
+    <link rel="prev" title="General" href="general.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #404040" >
+          
+
+          
+            <a href="../../index.html">
+          
+
+          
+            
+            <img src="../../_static/motionon.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">User interface</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Main window user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workspaces.html">Workspaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../instances.html">Running multiple instances of MotionON</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../preferences.html">Preference pages</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="general.html">General</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Playback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drawings.html">Drawings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="capture.html">Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyboard.html">Keyboard</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Observation and comparison</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../observation/loading.html">Loading videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../observation/playback_ui.html">Playback screen user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../observation/image_geometry.html">Image transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../observation/time_calibration.html">Time calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../observation/comparison.html">Comparison and synchronization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../observation/overview.html">Overview mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../observation/reverse.html">Reverse mode</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Annotation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../annotation/general.html">Annotating videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../annotation/tools.html">List of tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../annotation/style_and_opacity.html">Style and opacity of drawings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../annotation/time_origin.html">Time origin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../annotation/importing_images.html">Importing images and vector drawings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../annotation/annotation_files.html">Saving and loading annotation files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../annotation/importing_data.html">Importing external data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Measurement</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../measurement/calibration.html">Calibration mechanisms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../measurement/guidelines.html">Guidelines to minimize errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../measurement/coordinatesystem.html">Coordinate system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../measurement/lensdistortion.html">Lens distortion calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../measurement/time.html">Measuring time</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../measurement/distance.html">Measuring positions and distances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../measurement/angle.html">Measuring angles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../measurement/trajectory.html">Tracking point trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../measurement/tracking.html">Tracking distances and angles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../measurement/kinematics.html">Linear and angular kinematics</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Capture</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../capture/listing.html">Listing and opening cameras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../capture/userinterface.html">Capture screen user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../capture/hardware.html">Supported cameras and options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../capture/livedelay.html">Live delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../capture/recording.html">Recording</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../capture/replay.html">Replay folder observers</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Export</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../export/video.html">Exporting video and images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../export/data.html">Exporting data and measurements</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellaneous topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/faq.html">Frequently asked questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/update.html">Software update</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/command_line.html">Command line options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/copydata.html">Control from other applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/comms.html">Communication channels</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">MotionON</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../preferences.html">Preference pages</a> &raquo;</li>
+        
+      <li>Playback</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="playback">
+<h1>Playback<a class="headerlink" href="#playback" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="general">
+<h2>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/playback_general.png" src="../../_images/playback_general.png" />
+<div class="section" id="import-image-sequences-as-videos">
+<h3>Import image sequences as videos<a class="headerlink" href="#import-image-sequences-as-videos" title="Permalink to this headline">¶</a></h3>
+<p>When this option is enabled and an image file is opened, MotionON will try to detect an <strong>image sequence</strong> by looking for consecutive numbers in the name of other files of the same folder.
+If an image sequence is detected, all the image files will automatically be loaded and the whole collection interpreted as a video.</p>
+<p>Example of file names interpreted as a sequence:</p>
+<ul class="simple">
+<li><p>image_001.png, image_002.png, image_003.png, etc.</p></li>
+<li><p>test01.jpg, test02.jpg, test03.jpg, etc.</p></li>
+</ul>
+<p>The numbers can be anywhere in the file name.
+Aside from the numbers the rest of the name should be identical for all files.
+The amount of leading zeroes in the numbering scheme should be consistent between all files of the sequence.</p>
+<p>A gap or a change in the numbering system will be interpreted as the end of the sequence.
+The detection is bidirectional: any file can be used to load the sequence, the resulting video will always start at the file with the lower number found.</p>
+</div>
+<div class="section" id="link-speed-sliders-when-comparing-videos">
+<h3>Link speed sliders when comparing videos<a class="headerlink" href="#link-speed-sliders-when-comparing-videos" title="Permalink to this headline">¶</a></h3>
+<p>When this option is checked and two videos are compared, changing the playback speed in one player will automatically change the playback speed in the other player to match it.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The playback speed is matched according to the real time speed, taking into account differences in video file framerate and <a class="reference internal" href="../../observation/time_calibration.html"><span class="doc">capture framerate</span></a>.
+If one video is in slow motion and the other is at normal speed, this option should still work as expected as long as the capture framerate of the slow motion video is correctly configured.</p>
+</div>
+</div>
+<div class="section" id="update-image-during-time-cursor-movement">
+<h3>Update image during time cursor movement<a class="headerlink" href="#update-image-during-time-cursor-movement" title="Permalink to this headline">¶</a></h3>
+<p>When this option is not checked the video display will be paused when manually moving the timeline cursor.</p>
+</div>
+<div class="section" id="default-aspect-ratio">
+<h3>Default aspect ratio<a class="headerlink" href="#default-aspect-ratio" title="Permalink to this headline">¶</a></h3>
+<p>This option defines the default image aspect ratio configured any time a video file is opened. It is the same as manually configuring the menu <span class="menuselection">Image ‣ Image format</span>.</p>
+<p>The following options are available:</p>
+<ul class="simple">
+<li><p><span class="guilabel">Auto detection</span></p></li>
+<li><p><span class="guilabel">Force 4:3</span></p></li>
+<li><p><span class="guilabel">Force 16:9</span></p></li>
+</ul>
+<p>The <span class="guilabel">Auto detection</span> option uses the image size and the pixel aspect ratio found in the video file metadata to calculate the image height.
+The other options will change the height of the video to match a 4:3 or 16:9 aspect ratio.</p>
+</div>
+<div class="section" id="always-deinterlace-when-opening-a-new-video">
+<h3>Always deinterlace when opening a new video<a class="headerlink" href="#always-deinterlace-when-opening-a-new-video" title="Permalink to this headline">¶</a></h3>
+<p>This option forces the deinterlacing mechanism to be enabled for all opened files. It is the same as manually configuring the menu <span class="menuselection">Image ‣ Deinterlace</span>.</p>
+</div>
+<div class="section" id="default-annotations-file">
+<h3>Default annotations file<a class="headerlink" href="#default-annotations-file" title="Permalink to this headline">¶</a></h3>
+<p>This option lets you point to a .KVA file containing video annotations that will be automatically loaded when any video is opened.</p>
+<p>Other annotations files can still be loaded on top of the video by using the sidecar file method or through the menu <span class="menuselection">File ‣ Load annotations</span>. They will be merged with each others.</p>
+<p>See also: <a class="reference internal" href="../../annotation/annotation_files.html"><span class="doc">Saving and loading annotation files</span></a>.</p>
+</div>
+</div>
+<div class="section" id="memory">
+<h2>Memory<a class="headerlink" href="#memory" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/playback_memory.png" src="../../_images/playback_memory.png" />
+<div class="section" id="cache-memory-allocated-to-each-playback-screen">
+<h3>Cache memory allocated to each playback screen<a class="headerlink" href="#cache-memory-allocated-to-each-playback-screen" title="Permalink to this headline">¶</a></h3>
+<p>The cache memory is used to load the video content in system memory and speed up navigation.
+When the active video section (working zone) fits in the cache memory it will be automatically loaded into this cache. If the video section does not fit in the cache the memory will not be consumed.</p>
+<p>When using side by side comparison each playback screen can use at most half the memory amount configured.</p>
+<p>In the case of multiple instances of MotionON, each instance has its own cache memory.</p>
+</div>
+</div>
+<div class="section" id="units">
+<h2>Units<a class="headerlink" href="#units" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/playback_units.png" src="../../_images/playback_units.png" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The unit for length is defined during the calibration process.</p>
+</div>
+<div class="section" id="time">
+<h3>Time<a class="headerlink" href="#time" title="Permalink to this headline">¶</a></h3>
+<p>This option controls the format of all time-related information displayed in the program <a class="footnote-reference brackets" href="#f1" id="id1">1</a>. It is used in the timeline position and duration, in chronometers and clocks, and in exported files.</p>
+<p>The following options are available:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 41%" />
+<col style="width: 18%" />
+<col style="width: 41%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Format</p></th>
+<th class="head"><p>Example</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>[h:][mm:]ss.xx[x]</p></td>
+<td><p>1:10.48</p></td>
+<td><p>Textual timecode.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Frame number</p></td>
+<td><p>1762</p></td>
+<td><p>Rank of the current frame.</p></td>
+</tr>
+<tr class="row-even"><td><p>Total milliseconds</p></td>
+<td><p>70480</p></td>
+<td><p>Integer number of milliseconds.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Total microseconds</p></td>
+<td><p>1284</p></td>
+<td><p>Integer number of microseconds.</p></td>
+</tr>
+<tr class="row-even"><td><p>Ten thousandth of an hour</p></td>
+<td><p>904</p></td>
+<td><p>Ten thousandths of an hour</p></td>
+</tr>
+<tr class="row-odd"><td><p>Hundredth of a minute</p></td>
+<td><p>542</p></td>
+<td><p>Hundredths of a minute</p></td>
+</tr>
+<tr class="row-even"><td><p>[h:][mm:]ss.xx[x] + Frame number</p></td>
+<td><p>1:10.48 (1762)</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>When using textual timecode if the real time framerate is higher than 100 fps, thousandths of seconds are displayed. Hours and minutes are only displayed when necessary.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The time starts at the <strong>time origin</strong>. The time origin can be configured to be anywhere in the video.
+Video locations that are before the time origin are displayed as negative numbers.
+If the time origin is not manually defined, the time origin is automatically set to the start of the current video section.</p>
+</div>
+</div>
+<div class="section" id="speed">
+<h3>Speed<a class="headerlink" href="#speed" title="Permalink to this headline">¶</a></h3>
+<p>The unit for speed is used in the trajectory tool and in the <span class="guilabel">Linear kinematics</span> window when setting the measurement display option to <span class="guilabel">Speed</span>, <span class="guilabel">Horizontal velocity</span> or <span class="guilabel">Vertical velocity</span>.
+It is also used in the Angular kinematics window when using Tangential velocity.</p>
+<p>The following options are available:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 71%" />
+<col style="width: 29%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Unit</p></th>
+<th class="head"><p>Symbol</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Meters per second</p></td>
+<td><p>m/s</p></td>
+</tr>
+<tr class="row-odd"><td><p>Kilometers per hour</p></td>
+<td><p>km/h</p></td>
+</tr>
+<tr class="row-even"><td><p>Feet per second</p></td>
+<td><p>ft/s</p></td>
+</tr>
+<tr class="row-odd"><td><p>Miles per hour</p></td>
+<td><p>mph</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If no spatial calibration has been performed the speed unit will automatically be <strong>Pixels per second (px/s)</strong>.</p>
+</div>
+</div>
+<div class="section" id="acceleration">
+<h3>Acceleration<a class="headerlink" href="#acceleration" title="Permalink to this headline">¶</a></h3>
+<p>The unit for acceleration is used in the trajectory tool and in the <span class="guilabel">Linear kinematics</span> window when setting the measurement display option to <span class="guilabel">Acceleration</span>, <span class="guilabel">Horizontal acceleration</span> or <span class="guilabel">Vertical acceleration</span>.
+It is also used in the <span class="guilabel">Angular kinematics</span> window when using <span class="guilabel">Tangential acceleration</span>, <span class="guilabel">Centripetal acceleration</span> or <span class="guilabel">Resultant acceleration</span>.</p>
+<p>The following options are available:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 71%" />
+<col style="width: 29%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Unit</p></th>
+<th class="head"><p>Symbol</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Meters per second squared</p></td>
+<td><p>m/s²</p></td>
+</tr>
+<tr class="row-odd"><td><p>Feet per second squared</p></td>
+<td><p>ft/s²</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If no spatial calibration has been performed the acceleration unit will automatically be <strong>Pixels per second squared (px/s²)</strong>.</p>
+</div>
+</div>
+<div class="section" id="angle">
+<h3>Angle<a class="headerlink" href="#angle" title="Permalink to this headline">¶</a></h3>
+<p>The unit for angle is used in tools measuring angles and in the <span class="guilabel">Angular kinematics</span> window when setting the data source option to <span class="guilabel">Angle</span> or <span class="guilabel">Total displacement</span>.</p>
+<p>The following options are available:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 71%" />
+<col style="width: 29%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Unit</p></th>
+<th class="head"><p>Symbol</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Degrees</p></td>
+<td><p>°</p></td>
+</tr>
+<tr class="row-odd"><td><p>Radians</p></td>
+<td><p>rad</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="angular-velocity">
+<h3>Angular velocity<a class="headerlink" href="#angular-velocity" title="Permalink to this headline">¶</a></h3>
+<p>The unit for angular velocity is used in the <span class="guilabel">Angular kinematics</span> window when setting the data source option to <span class="guilabel">Angular velocity</span>.</p>
+<p>The following options are available:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 71%" />
+<col style="width: 29%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Unit</p></th>
+<th class="head"><p>Symbol</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Degrees per second</p></td>
+<td><p>deg/s</p></td>
+</tr>
+<tr class="row-odd"><td><p>Radians per second</p></td>
+<td><p>rad/s</p></td>
+</tr>
+<tr class="row-even"><td><p>Revolutions per minute</p></td>
+<td><p>rpm</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="angular-acceleration">
+<h3>Angular acceleration<a class="headerlink" href="#angular-acceleration" title="Permalink to this headline">¶</a></h3>
+<p>The unit for angular acceleration is used in the <span class="guilabel">Angular kinematics</span> window when setting the data source to <span class="guilabel">Angular acceleration</span>.</p>
+<p>The following options are available:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 71%" />
+<col style="width: 29%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Unit</p></th>
+<th class="head"><p>Symbol</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Degrees per second squared</p></td>
+<td><p>deg/s²</p></td>
+</tr>
+<tr class="row-odd"><td><p>Radians per second squared</p></td>
+<td><p>rad/s²</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="custom-length-unit">
+<h3>Custom length unit<a class="headerlink" href="#custom-length-unit" title="Permalink to this headline">¶</a></h3>
+<p>This option defines the name and symbol for an additional length unit.
+The built-in length units are: millimeters, centimeters, meters, inches, feet and yards.</p>
+<p>This custom length unit will appear at the bottom of the length unit drop down in the spatial calibration dialogs.</p>
+<p>The scale factor between pixels and this unit is defined during the calibration process in the same manner as for other length units.</p>
+<div class="figure align-center" id="id2">
+<img alt="../../_images/playback_units_custom.png" src="../../_images/playback_units_custom.png" />
+<p class="caption"><span class="caption-text">Using the custom length unit to add micrometers to the list of built-in length units.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p class="rubric">Footnotes</p>
+<dl class="footnote brackets">
+<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>With the exception of the time axis in the kinematic analysis dialogs. In these dialogs the time is always displayed numerically, either in milliseconds or normalized.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="drawings.html" class="btn btn-neutral float-right" title="Drawings" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="general.html" class="btn btn-neutral float-left" title="General" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2025, MotionON documentation authors (Cited Source: Kinovea documentation Authours, Credits CC0 1.0).
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

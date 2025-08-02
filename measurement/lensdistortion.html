@@ -1,0 +1,367 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Lens distortion calibration &mdash; MotionON 0.9.5 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/motionon.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Measuring time" href="time.html" />
+    <link rel="prev" title="Coordinate system" href="coordinatesystem.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #404040" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/motionon.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">User interface</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/overview.html">Main window user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/workspaces.html">Workspaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/instances.html">Running multiple instances of MotionON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/preferences.html">Preference pages</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Observation and comparison</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../observation/loading.html">Loading videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/playback_ui.html">Playback screen user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/image_geometry.html">Image transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/time_calibration.html">Time calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/comparison.html">Comparison and synchronization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/overview.html">Overview mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/reverse.html">Reverse mode</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Annotation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/general.html">Annotating videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/tools.html">List of tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/style_and_opacity.html">Style and opacity of drawings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/time_origin.html">Time origin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/importing_images.html">Importing images and vector drawings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/annotation_files.html">Saving and loading annotation files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/importing_data.html">Importing external data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Measurement</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="calibration.html">Calibration mechanisms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guidelines.html">Guidelines to minimize errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coordinatesystem.html">Coordinate system</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lens distortion calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="time.html">Measuring time</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distance.html">Measuring positions and distances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="angle.html">Measuring angles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trajectory.html">Tracking point trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tracking.html">Tracking distances and angles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics.html">Linear and angular kinematics</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Capture</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../capture/listing.html">Listing and opening cameras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capture/userinterface.html">Capture screen user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capture/hardware.html">Supported cameras and options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capture/livedelay.html">Live delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capture/recording.html">Recording</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capture/replay.html">Replay folder observers</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Export</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../export/video.html">Exporting video and images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../export/data.html">Exporting data and measurements</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellaneous topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/faq.html">Frequently asked questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/update.html">Software update</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/command_line.html">Command line options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/copydata.html">Control from other applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/comms.html">Communication channels</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MotionON</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Lens distortion calibration</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lens-distortion-calibration">
+<h1>Lens distortion calibration<a class="headerlink" href="#lens-distortion-calibration" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>When using cameras with significant distortion is it important to calibrate it in MotionON before making measurements.
+The lens distortion calibration rectifies the coordinates before they are passed to the spatial calibration.</p>
+<div class="figure align-center" id="id1">
+<img alt="../_images/distorted-coordinatesystem.png" src="../_images/distorted-coordinatesystem.png" />
+<p class="caption"><span class="caption-text">Barrel distortion exposed by a GoPro action camera and the default coordinate system after lens distortion calibration.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>Lens calibration is compatible with both line calibration and plane calibration.
+The coordinate system, lines and grid objects are drawn distorted to follow the distortion.
+The images themselves are not rectified.</p>
+<div class="figure align-center">
+<img alt="../_images/distorted-coordinatesystem-plane.png" src="../_images/distorted-coordinatesystem-plane.png" />
+</div>
+</div>
+<div class="section" id="distortion-coefficients">
+<h2>Distortion coefficients<a class="headerlink" href="#distortion-coefficients" title="Permalink to this headline">¶</a></h2>
+<p>The description of the lens distortion is done in the lens calibration dialog in the menu <span class="menuselection">Tools ‣ Camera calibration</span>.</p>
+<p>There are multiple approaches to finding coefficients that best match a particular camera lens and camera mode, they are described below.</p>
+<p>All the approaches involve filming a highly structured pattern in order to facilitate the distortion estimation, whether it is done visually or programmatically.
+This pattern can be a chess board, a brick wall, or any structured image displayed on a flat screen.</p>
+<p>The following parameters are used during calibration:</p>
+<ul class="simple">
+<li><p><span class="guilabel">fx</span>, <span class="guilabel">fy</span>: focal length in pixels.</p></li>
+<li><p><span class="guilabel">cx</span>, <span class="guilabel">cy</span>: pixel coordinates of the optical center.</p></li>
+<li><p><span class="guilabel">k1</span>, <span class="guilabel">k2</span>, <span class="guilabel">k3</span>: radial distortion coefficients.</p></li>
+<li><p><span class="guilabel">p1</span>, <span class="guilabel">p2</span>: tangential distortion coefficients.</p></li>
+</ul>
+</div>
+<div class="section" id="visual-estimation">
+<h2>Visual estimation<a class="headerlink" href="#visual-estimation" title="Permalink to this headline">¶</a></h2>
+<p>In this approach the distortion is estimated visually by directly changing the distortion coefficients and trying to align the grid on the image.
+It is the least accurate approach but can still provide decent results.</p>
+<img alt="../_images/distortion.png" src="../_images/distortion.png" />
+<p>Follow these steps:</p>
+<ul>
+<li><p>Film the pattern straight on.</p></li>
+<li><p>Load the video and open the lens calibration dialog.</p></li>
+<li><p>Tweak k1 and k2 distortion coefficients to match the distorted grid image.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>k1 is the distortion of the first order and should be used as a starting point to get the grid to align as best as possible in the central region of the image.</p></li>
+<li><p>k2 can be used to counteract the main distortion at the periphery of the image.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>You can play with the cx, cy, p1, p2 parameters as well to adjust the grid to the image.</p></li>
+</ul>
+</div>
+<div class="section" id="distortion-grid">
+<h2>Distortion grid<a class="headerlink" href="#distortion-grid" title="Permalink to this headline">¶</a></h2>
+<p>In this approach the distortion is estimated programmatically by MotionON from a set of distortion grid objects manually placed over images of the video.</p>
+<img alt="../_images/distortiongriddemo.png" src="../_images/distortiongriddemo.png" />
+<p>Follow these steps:</p>
+<ul class="simple">
+<li><p>Film a chess board or structured pattern from various angles.</p></li>
+<li><p>Select some images (for example five) and add a Distortion grid object.</p></li>
+</ul>
+<img alt="../_images/distortiongridbutton.png" src="../_images/distortiongridbutton.png" />
+<ul class="simple">
+<li><p>Map each point of each grid onto corners on the filmed pattern.</p></li>
+</ul>
+<img alt="../_images/distortiongridzoom.png" src="../_images/distortiongridzoom.png" />
+<ul class="simple">
+<li><p>Open the lens calibration dialog and click the <span class="guilabel">Calibrate camera</span> button in the lower left.</p></li>
+</ul>
+<p>This will compute and fill the distortion parameters.</p>
+</div>
+<div class="section" id="agisoft-lens">
+<h2>Agisoft Lens<a class="headerlink" href="#agisoft-lens" title="Permalink to this headline">¶</a></h2>
+<p>Agisoft Lens is an automatic lens calibration software.</p>
+<img alt="../_images/distortionagisoft.png" src="../_images/distortionagisoft.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Agisoft Lens as a free, standalone desktop software is no longer published by Agisoft.</p>
+</div>
+<p>To use Agisoft Lens to calibrate the lens distortion follow these steps:</p>
+<ul>
+<li><p>Open Agisoft Lens and display the chessboard using the <span class="guilabel">Show chessboard</span> button.</p></li>
+<li><p>Film the chessboard displayed from up close in such a way that only parts of the chessboard are visible, not the background of the monitor.</p></li>
+<li><p>Open the video in MotionON and export at least five images to separate files.</p></li>
+<li><p>In Agisoft Lens import the images using the <span class="guilabel">Add photos</span> button.</p></li>
+<li><p>Start calibration by using the <span class="guilabel">Calibrate</span> button, selecting the following options:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Fit cx, cy;</p></li>
+<li><p>Fit k1, k2, k3;</p></li>
+<li><p>Fit aspect;</p></li>
+<li><p>Fit p1, p2.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Use Save calibration to save an XML file of the solved parameters.</p></li>
+<li><p>In MotionON open the lens calibration dialog and do <span class="menuselection">File ‣ Import ‣ Agisoft Lens</span>.</p></li>
+</ul>
+<p>This will convert and fill the distortion parameters.</p>
+</div>
+<div class="section" id="exporting-and-importing-distortion-parameters">
+<h2>Exporting and importing distortion parameters<a class="headerlink" href="#exporting-and-importing-distortion-parameters" title="Permalink to this headline">¶</a></h2>
+<p>The distortion parameters are saved in the KVA file but if you want to re-use the same parameters on a different video you can export them to a separate file.
+Use the menus <span class="menuselection">File ‣ Save</span> and <span class="menuselection">File ‣ Open</span> in the lens calibration dialog.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Any change of camera model, lens, or configuration options involving image resolution or zoom requires a new calibration procedure.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="time.html" class="btn btn-neutral float-right" title="Measuring time" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="coordinatesystem.html" class="btn btn-neutral float-left" title="Coordinate system" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2025, MotionON documentation authors (Cited Source: Kinovea documentation Authours, Credits CC0 1.0).
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

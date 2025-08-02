@@ -1,0 +1,311 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Recording &mdash; MotionON 0.9.5 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/motionon.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Replay folder observers" href="replay.html" />
+    <link rel="prev" title="Live delay" href="livedelay.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #404040" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/motionon.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">User interface</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/overview.html">Main window user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/workspaces.html">Workspaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/instances.html">Running multiple instances of MotionON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/preferences.html">Preference pages</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Observation and comparison</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../observation/loading.html">Loading videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/playback_ui.html">Playback screen user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/image_geometry.html">Image transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/time_calibration.html">Time calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/comparison.html">Comparison and synchronization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/overview.html">Overview mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/reverse.html">Reverse mode</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Annotation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/general.html">Annotating videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/tools.html">List of tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/style_and_opacity.html">Style and opacity of drawings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/time_origin.html">Time origin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/importing_images.html">Importing images and vector drawings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/annotation_files.html">Saving and loading annotation files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/importing_data.html">Importing external data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Measurement</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/calibration.html">Calibration mechanisms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/guidelines.html">Guidelines to minimize errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/coordinatesystem.html">Coordinate system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/lensdistortion.html">Lens distortion calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/time.html">Measuring time</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/distance.html">Measuring positions and distances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/angle.html">Measuring angles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/trajectory.html">Tracking point trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/tracking.html">Tracking distances and angles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/kinematics.html">Linear and angular kinematics</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Capture</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="listing.html">Listing and opening cameras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="userinterface.html">Capture screen user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hardware.html">Supported cameras and options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="livedelay.html">Live delay</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Recording</a></li>
+<li class="toctree-l1"><a class="reference internal" href="replay.html">Replay folder observers</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Export</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../export/video.html">Exporting video and images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../export/data.html">Exporting data and measurements</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellaneous topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/faq.html">Frequently asked questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/update.html">Software update</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/command_line.html">Command line options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/copydata.html">Control from other applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/comms.html">Communication channels</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MotionON</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Recording</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="recording">
+<h1>Recording<a class="headerlink" href="#recording" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="starting-and-stopping-recording">
+<h2>Starting and stopping recording<a class="headerlink" href="#starting-and-stopping-recording" title="Permalink to this headline">¶</a></h2>
+<p>Recording can be started manually by using the record button <img alt="Record" src="../_images/control_rec.png" /> in the capture controls, or automatically by configuring an audio trigger.</p>
+<img alt="../_images/capturecontrols.png" src="../_images/capturecontrols.png" />
+<p>To configure the audio trigger, see Options &gt; Preferences &gt; Capture &gt; Automation.</p>
+</div>
+<div class="section" id="replaying-the-captured-video">
+<h2>Replaying the captured video<a class="headerlink" href="#replaying-the-captured-video" title="Permalink to this headline">¶</a></h2>
+<p>The videos recorded during the session are added to the list of recently captured files.</p>
+<p>A recording can be played back by double clicking the thumbnail of the recently captured file or by right clicking and choosing <span class="menuselection">Open</span>.</p>
+<p>New recordings can also be played back automatically by using a replay folder observer on the target folder of the capture screen.</p>
+</div>
+<div class="section" id="output-options">
+<h2>Output options<a class="headerlink" href="#output-options" title="Permalink to this headline">¶</a></h2>
+<p>The path to save the recording and the file name of the output video are based on the options under <span class="menuselection">Options ‣ Preferences ‣ Capture ‣ Video naming</span>.</p>
+<p>The duration of the recording is either set manually when using the stop recording button, or automatically when using the <span class="guilabel">Stop recording by duration</span> option in <span class="menuselection">Options ‣ Preferences ‣ Capture ‣ Automation</span>.</p>
+<p>Recordings can be compressed or uncompressed based on the option set in <span class="menuselection">Options ‣ Preferences ‣ Capture ‣ General</span>.</p>
+<p>Recordings can ignore or take into account the live delay based on the recording mode set in <span class="menuselection">Options ‣ Preferences ‣ Capture ‣ Recording</span>.</p>
+<p>For high speed cameras the framerate set in the metadata of the output video can be customized by configuring a replacement framerate in <span class="menuselection">Options ‣ Preferences ‣ Capture ‣ Recording</span>.</p>
+</div>
+<div class="section" id="performances">
+<h2>Performances<a class="headerlink" href="#performances" title="Permalink to this headline">¶</a></h2>
+<p>When the recording process is not fast enough to sustain the camera framerate, images are skipped (dropped) and not added to the output video.
+This can corrupt time measurements made on the output video, as this assumes stable frame rate.</p>
+<p>In order to make the most out of the camera without any frame drops, it is important to identify the bottlenecks and configure the camera and MotionON according to your requirements and the trade offs you are interested in.</p>
+<p>Use the infobar to get feedback about performances.</p>
+<img alt="../_images/infobar2.png" src="../_images/infobar2.png" />
+<p>See also: <a class="reference internal" href="userinterface.html"><span class="doc">Capture screen user interface</span></a>.</p>
+<div class="section" id="recording-mode">
+<h3>Recording mode<a class="headerlink" href="#recording-mode" title="Permalink to this headline">¶</a></h3>
+<p>The recording mode <span class="guilabel">Retroactive</span> should not yield any frame drops but the duration of the output videos is limited by the amount of memory allocated for the delay buffer.
+Furthermore, this mode renders the camera unavailable for a small duration after the recording, while MotionON performs the actual export.</p>
+<p>The other two modes record on-the-fly and can record for arbitrary long periods (based on storage space) and without post-recording pause. However they require more configuration if the camera does not already produce compressed images.</p>
+</div>
+<div class="section" id="compression">
+<h3>Compression<a class="headerlink" href="#compression" title="Permalink to this headline">¶</a></h3>
+<p>For cameras that do not produce an already compressed stream, MotionON may compresses the images on the fly on the CPU. This process is usually slow compared to the frame rate that the camera can sustain.</p>
+<p>You can disable compression on recordings under <span class="menuselection">Options ‣ Preferences ‣ Capture ‣ General</span>.</p>
+<p>When compression is disabled, the amount of data to store on file is between 5 to 10 times larger.
+In this configuration, the speed of the storage medium might become the new bottleneck.
+Solid state drives (SSD) are very much recommended instead of hard drives (HDD). NVMe SSD offer even better performances.
+Ultimately it is also possible to configure a RAM Drive to further increase the storage speed.</p>
+</div>
+</div>
+<div class="section" id="automation-scenario">
+<h2>Automation scenario<a class="headerlink" href="#automation-scenario" title="Permalink to this headline">¶</a></h2>
+<p>It is possible to setup MotionON to record and replay videos multiple times in a row without manual interaction.</p>
+<p>To do this set the recordings to start from the audio trigger and stop from the recording duration preset.
+Add a replay folder observer monitoring the capture folder, this will automatically open and play the last recorded video.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="replay.html" class="btn btn-neutral float-right" title="Replay folder observers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="livedelay.html" class="btn btn-neutral float-left" title="Live delay" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2025, MotionON documentation authors (Cited Source: Kinovea documentation Authours, Credits CC0 1.0).
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

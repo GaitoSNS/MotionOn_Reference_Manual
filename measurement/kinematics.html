@@ -1,0 +1,343 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Linear and angular kinematics &mdash; MotionON 0.9.5 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/motionon.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Scatter diagram" href="kinematics/scatter.html" />
+    <link rel="prev" title="Tracking distances and angles" href="tracking.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #404040" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/motionon.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">User interface</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/overview.html">Main window user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/workspaces.html">Workspaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/instances.html">Running multiple instances of MotionON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/preferences.html">Preference pages</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Observation and comparison</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../observation/loading.html">Loading videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/playback_ui.html">Playback screen user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/image_geometry.html">Image transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/time_calibration.html">Time calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/comparison.html">Comparison and synchronization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/overview.html">Overview mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/reverse.html">Reverse mode</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Annotation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/general.html">Annotating videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/tools.html">List of tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/style_and_opacity.html">Style and opacity of drawings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/time_origin.html">Time origin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/importing_images.html">Importing images and vector drawings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/annotation_files.html">Saving and loading annotation files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/importing_data.html">Importing external data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Measurement</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="calibration.html">Calibration mechanisms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guidelines.html">Guidelines to minimize errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coordinatesystem.html">Coordinate system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lensdistortion.html">Lens distortion calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="time.html">Measuring time</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distance.html">Measuring positions and distances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="angle.html">Measuring angles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trajectory.html">Tracking point trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tracking.html">Tracking distances and angles</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Linear and angular kinematics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kinematics/scatter.html">Scatter diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics/linear.html">Linear kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics/angular.html">Angular kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics/angleangle.html">Angle-angle diagram</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Capture</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../capture/listing.html">Listing and opening cameras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capture/userinterface.html">Capture screen user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capture/hardware.html">Supported cameras and options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capture/livedelay.html">Live delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capture/recording.html">Recording</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capture/replay.html">Replay folder observers</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Export</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../export/video.html">Exporting video and images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../export/data.html">Exporting data and measurements</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellaneous topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/faq.html">Frequently asked questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/update.html">Software update</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/command_line.html">Command line options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/copydata.html">Control from other applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/comms.html">Communication channels</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MotionON</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Linear and angular kinematics</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="linear-and-angular-kinematics">
+<h1>Linear and angular kinematics<a class="headerlink" href="#linear-and-angular-kinematics" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>To measure linear or angular speed and other kinematics quantities follow these steps:</p>
+<ul>
+<li><p>Establish a line or plane calibration.</p></li>
+<li><p>Compensate for lens distortion.</p></li>
+<li><p>Track a point trajectory or track an object containing an angle.</p></li>
+<li><p>The measured data can be displayed in two ways:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Directly on the object.</p></li>
+<li><p>In a dedicated kinematics diagram.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>To export the data, use the export options in the kinematics diagrams.</p></li>
+</ul>
+<p>To display the measurement as a label attached to the object, right click the object and choose an option under the <span class="menuselection">Display measure</span> menu.
+Each measurable object has specific options based on the quantities it can measure.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The data displayed directly on objects use raw coordinates whereas the kinematics diagram uses the (optional) filtering mechanism.</p>
+</div>
+</div>
+<div class="section" id="kinematics-diagrams">
+<h2>Kinematics diagrams<a class="headerlink" href="#kinematics-diagrams" title="Permalink to this headline">¶</a></h2>
+<p>The following kinematics diagrams are available:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="kinematics/scatter.html">Scatter diagram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics/linear.html">Linear kinematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics/angular.html">Angular kinematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics/angleangle.html">Angle-angle diagram</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="data-filtering">
+<h2>Data filtering<a class="headerlink" href="#data-filtering" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="rationale">
+<h3>Rationale<a class="headerlink" href="#rationale" title="Permalink to this headline">¶</a></h3>
+<p>Due to the digitization process the raw coordinates are noisy and the resulting quantities, especially derivatives like speed and acceleration, are less accurate than they could be.
+Carefully filtering the coordinates remove a lot of this noise and provide more accurate measurements.</p>
+<p>Data shown in the kinematics diagrams is computed using filtered coordinates.
+This filtering can be disabled under <span class="menuselection">Preferences ‣ Drawings ‣ General ‣ Enable coordinates filtering</span>.</p>
+</div>
+<div class="section" id="filtering-mechanism">
+<h3>Filtering mechanism<a class="headerlink" href="#filtering-mechanism" title="Permalink to this headline">¶</a></h3>
+<p>The coordinates are passed through a low pass filter to remove noise.
+The filter does two passes of a second-order Butterworth filter.
+The two passes (one forward, one backward) are used to reset the phase shift <a class="footnote-reference brackets" href="#f1" id="id1">1</a>.</p>
+<p>To initialize the filter, the trajectory is extrapolated for 10 data points on each side using reflected values around the end points.
+The extrapolated points are then removed from the filtered results <a class="footnote-reference brackets" href="#f2" id="id2">2</a>.</p>
+<p>The filter is tested on the data at various cutoff frequencies between 0.5Hz and the Nyquist frequency.
+The best cutoff frequency is computed by estimating the autocorrelation of residuals and finding the frequency yielding the residuals that are the least autocorrelated.
+The filtered data set corresponding to this cutoff frequency is kept as the final result <a class="footnote-reference brackets" href="#f3" id="id3">3</a>.</p>
+<p>The autocorrelation of residuals is estimated using the Durbin-Watson statistic.</p>
+</div>
+<div class="section" id="cutoff-frequency-visualization">
+<h3>Cutoff frequency visualization<a class="headerlink" href="#cutoff-frequency-visualization" title="Permalink to this headline">¶</a></h3>
+<p>For trajectories, the cutoff frequency can be visualized in the About tab of the diagram dialog.
+The calculated cutoff frequency depends on the data and is different for each trajectory object.</p>
+<img alt="../_images/filtering-cutoff.png" src="../_images/filtering-cutoff.png" />
+<p class="rubric">Footnotes</p>
+<dl class="footnote brackets">
+<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Winter, D. A. (2009). Biomechanics and motor control of human movements (4th ed.). Hoboken, New Jersey: John Wiley &amp; Sons, Inc.</p>
+</dd>
+<dt class="label" id="f2"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Smith G. (1989). Padding point extrapolation techniques for the butterworth digital filter. J. Biomech. Vol. 22, No. s/9, pp. 967-971.</p>
+</dd>
+<dt class="label" id="f3"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>Challis J. (1999). A procedure for the automatic determination of filter cutoff frequency for the processing of biomechanical data., Journal of Applied Biomechanics, Volume 15, Issue 3.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="kinematics/scatter.html" class="btn btn-neutral float-right" title="Scatter diagram" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="tracking.html" class="btn btn-neutral float-left" title="Tracking distances and angles" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2025, MotionON documentation authors (Cited Source: Kinovea documentation Authours, Credits CC0 1.0).
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

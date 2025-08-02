@@ -1,0 +1,572 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Capture &mdash; MotionON 0.9.5 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/motionon.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Keyboard" href="keyboard.html" />
+    <link rel="prev" title="Drawings" href="drawings.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #404040" >
+          
+
+          
+            <a href="../../index.html">
+          
+
+          
+            
+            <img src="../../_static/motionon.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">User interface</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Main window user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workspaces.html">Workspaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../instances.html">Running multiple instances of MotionON</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../preferences.html">Preference pages</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="general.html">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="playback.html">Playback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drawings.html">Drawings</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyboard.html">Keyboard</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Observation and comparison</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../observation/loading.html">Loading videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../observation/playback_ui.html">Playback screen user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../observation/image_geometry.html">Image transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../observation/time_calibration.html">Time calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../observation/comparison.html">Comparison and synchronization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../observation/overview.html">Overview mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../observation/reverse.html">Reverse mode</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Annotation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../annotation/general.html">Annotating videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../annotation/tools.html">List of tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../annotation/style_and_opacity.html">Style and opacity of drawings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../annotation/time_origin.html">Time origin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../annotation/importing_images.html">Importing images and vector drawings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../annotation/annotation_files.html">Saving and loading annotation files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../annotation/importing_data.html">Importing external data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Measurement</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../measurement/calibration.html">Calibration mechanisms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../measurement/guidelines.html">Guidelines to minimize errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../measurement/coordinatesystem.html">Coordinate system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../measurement/lensdistortion.html">Lens distortion calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../measurement/time.html">Measuring time</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../measurement/distance.html">Measuring positions and distances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../measurement/angle.html">Measuring angles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../measurement/trajectory.html">Tracking point trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../measurement/tracking.html">Tracking distances and angles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../measurement/kinematics.html">Linear and angular kinematics</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Capture</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../capture/listing.html">Listing and opening cameras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../capture/userinterface.html">Capture screen user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../capture/hardware.html">Supported cameras and options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../capture/livedelay.html">Live delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../capture/recording.html">Recording</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../capture/replay.html">Replay folder observers</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Export</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../export/video.html">Exporting video and images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../export/data.html">Exporting data and measurements</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellaneous topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/faq.html">Frequently asked questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/update.html">Software update</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/command_line.html">Command line options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/copydata.html">Control from other applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/comms.html">Communication channels</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">MotionON</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../preferences.html">Preference pages</a> &raquo;</li>
+        
+      <li>Capture</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="capture">
+<h1>Capture<a class="headerlink" href="#capture" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="general">
+<h2>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/capture_general.png" src="../../_images/capture_general.png" />
+<div class="section" id="record-uncompressed-video">
+<h3>Record uncompressed video<a class="headerlink" href="#record-uncompressed-video" title="Permalink to this headline">¶</a></h3>
+<p>When this option is checked the video are recorded without compressing the video frames to JPEG first.
+When this option is unchecked the video frames are compressed to JPEG using high quality settings to retain fidelity.</p>
+<p>This option can be used to minimize dropped frames, by trading off space for speed (due to the JPEG settings used, image quality shouldn’t really be much impacted by this option).
+When using a fast storage medium it can be faster to store the large uncompressed images compared to the time it takes to compress them.</p>
+<p>For image snapshots the compression depends on the file format.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When configuring cameras to use MJPEG streams this option is ignored. The MJPEG streams are always saved as-is in their container format.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When configuring cameras to use raw Bayer pattern images you must enable this option to be able to reconstruct the color information at playback time.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Not all video players can play back uncompressed files.</p>
+</div>
+</div>
+<div class="section" id="display-framerate">
+<h3>Display framerate<a class="headerlink" href="#display-framerate" title="Permalink to this headline">¶</a></h3>
+<p>This option defines the frequency at which the camera images are updated in the capture screen.</p>
+<p>While recording the computer resources are shared between displaying the camera stream and recording it to the storage medium.
+The highest priority is always given to recording but lowering this value can help reduce the overall load on the computer and improve recording performance.</p>
+</div>
+<div class="section" id="image-format">
+<h3>Image format<a class="headerlink" href="#image-format" title="Permalink to this headline">¶</a></h3>
+<p>This option defines the default image format used when saving snapshots.</p>
+<p>The following image formats are available:</p>
+<ul class="simple">
+<li><p><span class="guilabel">JPG</span></p></li>
+<li><p><span class="guilabel">PNG</span></p></li>
+<li><p><span class="guilabel">BMP</span></p></li>
+</ul>
+</div>
+<div class="section" id="video-format">
+<h3>Video format<a class="headerlink" href="#video-format" title="Permalink to this headline">¶</a></h3>
+<p>This option defines the default video container format used when recording compressed videos. All videos are compressed using an MJPEG codec.</p>
+<p>The following container formats are available:</p>
+<ul class="simple">
+<li><p><span class="guilabel">MP4</span></p></li>
+<li><p><span class="guilabel">AVI</span></p></li>
+<li><p><span class="guilabel">MKV</span></p></li>
+</ul>
+</div>
+<div class="section" id="uncompressed-video-format">
+<h3>Uncompressed video format<a class="headerlink" href="#uncompressed-video-format" title="Permalink to this headline">¶</a></h3>
+<p>This option defines the default video container format used when recording uncompressed videos.</p>
+<p>The following container formats are available:</p>
+<ul class="simple">
+<li><p><span class="guilabel">MKV</span></p></li>
+<li><p><span class="guilabel">AVI</span></p></li>
+</ul>
+</div>
+<div class="section" id="default-annotations-file">
+<h3>Default annotations file<a class="headerlink" href="#default-annotations-file" title="Permalink to this headline">¶</a></h3>
+<p>This option lets you point to a .KVA file containing annotations that will be automatically loaded when any camera stream is opened.</p>
+<p>Other annotations files can still be loaded on top of the camera stream by using the menu <span class="menuselection">File ‣ Load annotations</span>. They will be merged with each others.</p>
+<p>See also: <a class="reference internal" href="../../annotation/annotation_files.html"><span class="doc">Saving and loading annotation files</span></a>.</p>
+</div>
+</div>
+<div class="section" id="memory">
+<h2>Memory<a class="headerlink" href="#memory" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/capture_memory.png" src="../../_images/capture_memory.png" />
+<div class="section" id="memory-allocated-for-delay-buffers">
+<h3>Memory allocated for delay buffers<a class="headerlink" href="#memory-allocated-for-delay-buffers" title="Permalink to this headline">¶</a></h3>
+<p>This option controls the amount of memory used to remember old frames, in the context of the delayed view of the camera feed.
+By extension, this option defines the maximum delay configurable in the capture screen. The maximum delay is based on image size, image format and capture framerate.</p>
+<p>When using two capture screens at the same time each screen uses half the memory amount configured.</p>
+<p>In the case of multiple instances of MotionON, each instance has its own delay buffer memory.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Unlike the cache memory in the playback screen, this amount of memory is always allocated and used as soon as a capture screen is opened.</p>
+</div>
+</div>
+</div>
+<div class="section" id="recording">
+<h2>Recording<a class="headerlink" href="#recording" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/capture_recording.png" src="../../_images/capture_recording.png" />
+<div class="section" id="recording-mode-and-delay">
+<h3>Recording mode and delay<a class="headerlink" href="#recording-mode-and-delay" title="Permalink to this headline">¶</a></h3>
+<p>The recording mode option defines how the recording sub-system interacts with the delay buffer to create the output video.</p>
+<p>When the camera transmits a new frame it is always put in the delay buffer and the recording sub-system always takes frames from the delay buffer to create the output video.</p>
+<div class="section" id="camera">
+<h4>Camera<a class="headerlink" href="#camera" title="Permalink to this headline">¶</a></h4>
+<p>When using this recording mode the delay value set in the capture screen is ignored.</p>
+<p>Recording is performed on the fly, the saved frame is always the most recent frame sent by the camera.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you do not require recording of delayed images this option can result in slightly better performances than the Delayed method.</p>
+</div>
+</div>
+<div class="section" id="delayed">
+<h4>Delayed<a class="headerlink" href="#delayed" title="Permalink to this headline">¶</a></h4>
+<p>When using this recording mode the delay value set in the capture screen is taken into account.</p>
+<p>Recording is performed on the fly, the saved frame is taken from the delay buffer based on the delay value.</p>
+<p>This can be used to record actions happening before the moment the record button is hit or triggered.</p>
+</div>
+<div class="section" id="retroactive">
+<h4>Retroactive<a class="headerlink" href="#retroactive" title="Permalink to this headline">¶</a></h4>
+<p>When using this recording mode the recording is not performed on the fly.
+Instead, at the end of the recording process, when clicking the stop recording button or when the maximum recording duration is reached, the camera feed is paused, the delay buffer is frozen, and the video file is created all at once.</p>
+<p>The delay value is taken into account for creating the recording.</p>
+<p>This mode offers the best recording performances and minimizes dropped frames, at the cost of a reduced maximum length for created videos and a temporary freezing of the camera feed.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The maximum length of recorded videos using this recording mode depends on the size of the delay buffer. This can be configured from the Memory preference page.</p>
+</div>
+</div>
+</div>
+<div class="section" id="high-speed-cameras">
+<h3>High speed cameras<a class="headerlink" href="#high-speed-cameras" title="Permalink to this headline">¶</a></h3>
+<p>The options in this group let you alter the framerate written in the metadata of the output file.
+This influences the amount of resources required to replay the file and the apparent speed of the action.</p>
+<p>A camera might be capable of producing and transmitting 1000 frames per second but the computer will not be able to play the file back at that speed and the monitor won’t be able to refresh itself fast enough either.
+To work around this problem it is usual to reduce the framerate of the output file to a more typical one. Recording devices normally apply this transformation automatically. This results in a video that appears to be in slow motion.</p>
+<div class="section" id="framerate-replacement-threshold">
+<h4>Framerate replacement threshold<a class="headerlink" href="#framerate-replacement-threshold" title="Permalink to this headline">¶</a></h4>
+<p>This option controls the framerate from which the output file is modified to use a lower one.</p>
+<p>If the camera is configured to send images at a higher framerate than this value, the actual framerate stored in the file metadata will be the replacement framerate.
+If the camera is configured to send images at a lower framerate than this value, no change will happen.</p>
+</div>
+<div class="section" id="replacement-framerate">
+<h4>Replacement framerate<a class="headerlink" href="#replacement-framerate" title="Permalink to this headline">¶</a></h4>
+<p>This value defines the final framerate written in the file metadata when the framerate configured in the camera is above the threshold.</p>
+</div>
+</div>
+</div>
+<div class="section" id="image-naming">
+<h2>Image naming<a class="headerlink" href="#image-naming" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/capture_imagenaming.png" src="../../_images/capture_imagenaming.png" />
+<p>The options on this page let you configure the automated naming system for image snapshots of the camera stream.</p>
+<p>The final path and file name is created by concatenating the <span class="guilabel">Root</span>, <span class="guilabel">Sub directory</span> and <span class="guilabel">File</span> values.
+Each field can contain special macros referring to context variables that are automatically inserted in the final path.</p>
+<p>If no context variable are used at all, the file naming system will prepare the next recording by automatically incrementing a counter and appending a number to the file name.</p>
+<p>If the computed value result in the same name as an existing file the capture screen will prompt for overwrite confirmation.</p>
+<p>To view the list of available context variables click the <span class="guilabel">%</span> button next to the <span class="guilabel">Sub directory</span> or <span class="guilabel">File</span> fields.</p>
+<p>The following context variables are available:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 81%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Macro</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>%year</p></td>
+<td><p>The current year</p></td>
+</tr>
+<tr class="row-odd"><td><p>%month</p></td>
+<td><p>The current month as a number from 01 to 12.</p></td>
+</tr>
+<tr class="row-even"><td><p>%day</p></td>
+<td><p>The current day of the month from 01 to 31.</p></td>
+</tr>
+<tr class="row-odd"><td><p>%hour</p></td>
+<td><p>The current hour from 00 to 23.</p></td>
+</tr>
+<tr class="row-even"><td><p>%minute</p></td>
+<td><p>The current minute from 00 to 59.</p></td>
+</tr>
+<tr class="row-odd"><td><p>%second</p></td>
+<td><p>The current second from 00 to 59.</p></td>
+</tr>
+<tr class="row-even"><td><p>%date</p></td>
+<td><p>The current date in the format “YYYYMMDD”.</p></td>
+</tr>
+<tr class="row-odd"><td><p>%time</p></td>
+<td><p>The current time in the format “HHMMSS”.</p></td>
+</tr>
+<tr class="row-even"><td><p>%datetime</p></td>
+<td><p>The current date and time as “YYYYMMDD-HHMMSS”.</p></td>
+</tr>
+<tr class="row-odd"><td><p>%camalias</p></td>
+<td><p>The camera alias.</p></td>
+</tr>
+<tr class="row-even"><td><p>%camfps</p></td>
+<td><p>The configured framerate for the camera.</p></td>
+</tr>
+<tr class="row-odd"><td><p>%recvfps</p></td>
+<td><p>The framerate really received from the camera.</p></td>
+</tr>
+<tr class="row-even"><td><p>%%</p></td>
+<td><p>This is replaced by an empty string.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Anything that is not exactly part of a macro is copied verbatim to the output.
+Some examples assuming the current date and time is October 20th, 1968 at 16:00:00 (4 PM):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">year</span><span class="o">-%</span><span class="n">month</span><span class="o">-%</span><span class="n">day</span><span class="p">:</span> <span class="mi">1968</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mf">20.</span>
+<span class="o">%</span><span class="n">hour</span><span class="o">-%</span><span class="n">minute</span><span class="o">-%</span><span class="n">second</span><span class="p">:</span> <span class="mi">16</span><span class="o">-</span><span class="mi">00</span><span class="o">-</span><span class="mf">00.</span>
+<span class="o">%</span><span class="n">datetime</span><span class="p">:</span> <span class="mi">19681020</span><span class="o">-</span><span class="mi">160000</span>
+<span class="o">%</span><span class="n">date_text</span><span class="p">:</span> <span class="mi">19681020</span><span class="n">_text</span>
+<span class="o">%</span><span class="n">date</span><span class="o">-%</span><span class="n">camalias</span><span class="p">:</span> <span class="mi">19681020</span><span class="o">-</span><span class="n">mycamcorder</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you want to use a completely static file name and bypass the automated counter increment for consecutive recordings, use the <span class="guilabel">%%</span> macro variable.
+Be aware that this will require you to either enter the filename manually for every recording or overwrite an existing file.</p>
+</div>
+</div>
+<div class="section" id="video-naming">
+<h2>Video naming<a class="headerlink" href="#video-naming" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/capture_videonaming.png" src="../../_images/capture_videonaming.png" />
+<p>The options on this page let you configure the automated naming system for video recordings of the cameras streams.</p>
+<p>The options are similar to the ones in Image naming.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Avoid using the Windows system drive as a target for camera recording to minimize concurrent access and resource sharing.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To improve performances in dual recording scenarios use two different physical storage mediums for the left and right cameras.</p>
+</div>
+</div>
+<div class="section" id="automation">
+<h2>Automation<a class="headerlink" href="#automation" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/capture_automation.png" src="../../_images/capture_automation.png" />
+<div class="section" id="audio-trigger">
+<h3>Audio trigger<a class="headerlink" href="#audio-trigger" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="enable-audio-trigger">
+<h4>Enable audio trigger<a class="headerlink" href="#enable-audio-trigger" title="Permalink to this headline">¶</a></h4>
+<p>When this option is checked MotionON measures the volume level on the microphone and triggers the start of the recording when this volume goes above the configured threshold.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The audio trigger mechanism can be disarmed for individual cameras from the capture screen controls.</p>
+</div>
+</div>
+<div class="section" id="input-device">
+<h4>Input device<a class="headerlink" href="#input-device" title="Permalink to this headline">¶</a></h4>
+<p>This option lets you select which microphone is used to trigger recordings.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Ensure that MotionON can access your microphone by opening <span class="guilabel">Windows Sound settings</span>, going to <span class="guilabel">Microphone privacy settings</span> and turning on <span class="guilabel">Allow apps to access your microphone</span>.</p>
+</div>
+</div>
+<div class="section" id="trigger-threshold">
+<h4>Trigger threshold<a class="headerlink" href="#trigger-threshold" title="Permalink to this headline">¶</a></h4>
+<p>The trigger threshold defines the volume level required to trigger recordings.
+You should see the black line moving laterally as the microphone picks up sounds. The vertical red line represents the trigger level.</p>
+<p>The counter on the right is incremented each time the trigger is reached and reset when the threshold value is changed.
+You can use this to get immediate feedback while figuring out the appropriate configuration.</p>
+</div>
+<div class="section" id="idle-time">
+<h4>Idle time<a class="headerlink" href="#idle-time" title="Permalink to this headline">¶</a></h4>
+<p>The idle time defines the amount of time after each recording during which the audio trigger is automatically disarmed.</p>
+</div>
+</div>
+<div class="section" id="stop-recording-by-duration">
+<h3>Stop recording by duration<a class="headerlink" href="#stop-recording-by-duration" title="Permalink to this headline">¶</a></h3>
+<p>This option defines the maximum duration for recordings.
+Recordings started manually or by audio trigger will be stopped right after they reach this duration.
+Setting the value to 0 disables the option and requires manually stopping the recording process.</p>
+<p>This option is orthogonal to delayed recording.
+For example if the camera is configured with a 2-second delay and the maximum duration is set to 5 seconds, the created video will last 5 seconds as configured:
+the first 2 seconds are actions that happened before the recording trigger and the last 3 seconds are actions that happened after the recording trigger.</p>
+<p>In combination with the audio trigger this option lets you record multiple sequences without manually interacting with the computer.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This value is a lower bound, the final video might be slightly longer than configured due to internal processing and alignment with frame boundaries.</p>
+</div>
+</div>
+<div class="section" id="post-recording-command">
+<h3>Post recording command<a class="headerlink" href="#post-recording-command" title="Permalink to this headline">¶</a></h3>
+<p>This option lets you set up a program that will be run at the end of every recording. This can be used to automatically copy the file to a different location, perform compression or apply post-processing.</p>
+<p>The command line can contain special macros referring to context variables that are automatically inserted in the final command.</p>
+<p>The following context variables are available:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Macro</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>%directory</p></td>
+<td><p>The directory where the recording was saved.</p></td>
+</tr>
+<tr class="row-odd"><td><p>%filename</p></td>
+<td><p>The name of the recorded file.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="ignore-file-overwrite-warning">
+<h3>Ignore file overwrite warning<a class="headerlink" href="#ignore-file-overwrite-warning" title="Permalink to this headline">¶</a></h3>
+<p>This option bypasses the overwrite confirmation dialog when the recording about to start points to an existing file. If the option is checked the existing file is irremediably deleted and overwritten by the new one.</p>
+<p>This option can be used if you are limited in space and do not need to save all sequences.
+In this scenario you can continuously record to a single file and manually copy it to a different location only when you really want to keep it.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="keyboard.html" class="btn btn-neutral float-right" title="Keyboard" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="drawings.html" class="btn btn-neutral float-left" title="Drawings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2025, MotionON documentation authors (Cited Source: Kinovea documentation Authours, Credits CC0 1.0).
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

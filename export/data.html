@@ -1,0 +1,317 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Exporting data and measurements &mdash; MotionON 0.9.5 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/motionon.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Frequently asked questions" href="../misc/faq.html" />
+    <link rel="prev" title="Exporting video and images" href="video.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #404040" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/motionon.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">User interface</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/overview.html">Main window user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/workspaces.html">Workspaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/instances.html">Running multiple instances of MotionON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/preferences.html">Preference pages</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Observation and comparison</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../observation/loading.html">Loading videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/playback_ui.html">Playback screen user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/image_geometry.html">Image transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/time_calibration.html">Time calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/comparison.html">Comparison and synchronization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/overview.html">Overview mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/reverse.html">Reverse mode</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Annotation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/general.html">Annotating videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/tools.html">List of tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/style_and_opacity.html">Style and opacity of drawings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/time_origin.html">Time origin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/importing_images.html">Importing images and vector drawings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/annotation_files.html">Saving and loading annotation files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/importing_data.html">Importing external data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Measurement</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/calibration.html">Calibration mechanisms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/guidelines.html">Guidelines to minimize errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/coordinatesystem.html">Coordinate system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/lensdistortion.html">Lens distortion calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/time.html">Measuring time</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/distance.html">Measuring positions and distances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/angle.html">Measuring angles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/trajectory.html">Tracking point trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/tracking.html">Tracking distances and angles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/kinematics.html">Linear and angular kinematics</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Capture</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../capture/listing.html">Listing and opening cameras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capture/userinterface.html">Capture screen user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capture/hardware.html">Supported cameras and options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capture/livedelay.html">Live delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capture/recording.html">Recording</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capture/replay.html">Replay folder observers</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Export</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="video.html">Exporting video and images</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Exporting data and measurements</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellaneous topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/faq.html">Frequently asked questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/update.html">Software update</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/command_line.html">Command line options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/copydata.html">Control from other applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/comms.html">Communication channels</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MotionON</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Exporting data and measurements</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="exporting-data-and-measurements">
+<h1>Exporting data and measurements<a class="headerlink" href="#exporting-data-and-measurements" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="save-annotations">
+<h2>Save annotations<a class="headerlink" href="#save-annotations" title="Permalink to this headline">¶</a></h2>
+<p>To save annotations use <kbd class="kbd docutils literal notranslate">CTRL</kbd> + <kbd class="kbd docutils literal notranslate">S</kbd> or the menus <span class="menuselection">Save</span> or <span class="menuselection">Save as…</span>. This saves annotations to a KVA file, the native annotation format of MotionON.</p>
+</div>
+<div class="section" id="export-measurements-from-kinematics-dialogs">
+<h2>Export measurements from kinematics dialogs<a class="headerlink" href="#export-measurements-from-kinematics-dialogs" title="Permalink to this headline">¶</a></h2>
+<p>To export measurements such as point positions, linear velocities, or angular accelerations, use the kinematics dialogs.
+The kinematics dialogs are found under the <span class="menuselection">Tools</span> menu: <span class="menuselection">Scatter diagram</span>, <span class="menuselection">Linear kinematics</span>, <span class="menuselection">Angular kinematics</span>, <span class="menuselection">Angle-angle diagram</span>.</p>
+<p>To export data use the export options at the bottom right of the dialogs.</p>
+<img alt="../_images/exportdata.png" src="../_images/exportdata.png" />
+<p>This will export the data in CSV format, either to the clipboard or to a file.
+The first column is the time, either in milliseconds or normalized, and the other columns are the data sources.</p>
+<p>The measurements displayed and exported from the kinematics dialog use the filtered coordinates.
+The filtering process is described in the About box of the <span class="guilabel">Linear kinematics</span> dialog.
+You can control filtering from the preferences at <span class="menuselection">Options ‣ Preferences ‣ Drawings ‣ General ‣ Enable coordinates filtering</span>.</p>
+</div>
+<div class="section" id="export-data-to-spreadsheet">
+<h2>Export data to spreadsheet<a class="headerlink" href="#export-data-to-spreadsheet" title="Permalink to this headline">¶</a></h2>
+<p>Another option to export data is to use the converters menus under <span class="menuselection">File ‣ Export to spreadsheet</span>.</p>
+<p>The following options are available:</p>
+<ul class="simple">
+<li><p><span class="guilabel">LibreOffice (.odf)</span></p></li>
+<li><p><span class="guilabel">Microsoft Excel (.xml)</span></p></li>
+<li><p><span class="guilabel">Web (.html)</span></p></li>
+<li><p><span class="guilabel">Gnuplot (.txt)</span></p></li>
+</ul>
+<p>The underlying mechanism for these menus is to <strong>convert</strong> the annotation data into the output format: it does not perform any higher level computations.
+This approach has the following differences with the export from the kinematics dialogs:</p>
+<ul class="simple">
+<li><p>The coordinates do not use filtering.</p></li>
+<li><p>Only the coordinates are exported, not any higher level measurements like speed or acceleration.</p></li>
+<li><p>Each object is exported independently in its own table.</p></li>
+<li><p>Key images times are exported.</p></li>
+<li><p>Stopwatches are exported.</p></li>
+<li><p>The time column uses the configured timecode format and may not be numerical in nature.</p></li>
+</ul>
+<p>To use Gnuplot to plot the trajectory data on a 3D graph with time as the third dimensions, you can use the following commands:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gnuplot</span><span class="o">&gt;</span> <span class="nb">set</span> <span class="n">xlabel</span> <span class="s2">&quot;Time&quot;</span>
+<span class="n">gnuplot</span><span class="o">&gt;</span> <span class="nb">set</span> <span class="n">ylabel</span> <span class="s2">&quot;X-AXIS&quot;</span>
+<span class="n">gnuplot</span><span class="o">&gt;</span> <span class="nb">set</span> <span class="n">zlabel</span> <span class="s2">&quot;Y-AXIS&quot;</span>
+<span class="n">gnuplot</span><span class="o">&gt;</span> <span class="nb">set</span> <span class="n">ticslevel</span> <span class="mi">0</span>
+<span class="n">gnuplot</span><span class="o">&gt;</span> <span class="n">splot</span> <span class="s2">&quot;weightlift.txt&quot;</span> <span class="n">using</span> <span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="mi">3</span> <span class="k">with</span> <span class="n">lines</span>
+</pre></div>
+</div>
+<img alt="../_images/gnuplot.png" src="../_images/gnuplot.png" />
+</div>
+<div class="section" id="citation-examples">
+<h2>Citation examples<a class="headerlink" href="#citation-examples" title="Permalink to this headline">¶</a></h2>
+<p>If you used MotionON in your research we would very much appreciate it if you included it in your bibliography.</p>
+<p>You can find examples of formatted citations in the About dialog under the Citation tab.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>MotionON is an open source project and is not published by a company,
+thus there is no meaningful “city” or “country” of origin as is sometimes requested by journals for software references.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../misc/faq.html" class="btn btn-neutral float-right" title="Frequently asked questions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="video.html" class="btn btn-neutral float-left" title="Exporting video and images" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2025, MotionON documentation authors (Cited Source: Kinovea documentation Authours, Credits CC0 1.0).
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

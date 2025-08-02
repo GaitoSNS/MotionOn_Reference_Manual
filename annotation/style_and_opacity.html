@@ -1,0 +1,314 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Style and opacity of drawings &mdash; MotionON 0.9.5 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/motionon.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Time origin" href="time_origin.html" />
+    <link rel="prev" title="List of tools" href="tools.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #404040" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/motionon.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">User interface</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/overview.html">Main window user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/workspaces.html">Workspaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/instances.html">Running multiple instances of MotionON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/preferences.html">Preference pages</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Observation and comparison</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../observation/loading.html">Loading videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/playback_ui.html">Playback screen user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/image_geometry.html">Image transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/time_calibration.html">Time calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/comparison.html">Comparison and synchronization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/overview.html">Overview mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/reverse.html">Reverse mode</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Annotation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="general.html">Annotating videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html">List of tools</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Style and opacity of drawings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="time_origin.html">Time origin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="importing_images.html">Importing images and vector drawings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="annotation_files.html">Saving and loading annotation files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="importing_data.html">Importing external data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Measurement</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/calibration.html">Calibration mechanisms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/guidelines.html">Guidelines to minimize errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/coordinatesystem.html">Coordinate system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/lensdistortion.html">Lens distortion calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/time.html">Measuring time</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/distance.html">Measuring positions and distances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/angle.html">Measuring angles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/trajectory.html">Tracking point trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/tracking.html">Tracking distances and angles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/kinematics.html">Linear and angular kinematics</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Capture</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../capture/listing.html">Listing and opening cameras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capture/userinterface.html">Capture screen user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capture/hardware.html">Supported cameras and options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capture/livedelay.html">Live delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capture/recording.html">Recording</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capture/replay.html">Replay folder observers</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Export</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../export/video.html">Exporting video and images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../export/data.html">Exporting data and measurements</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellaneous topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/faq.html">Frequently asked questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/update.html">Software update</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/command_line.html">Command line options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/copydata.html">Control from other applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/comms.html">Communication channels</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MotionON</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Style and opacity of drawings</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="style-and-opacity-of-drawings">
+<h1>Style and opacity of drawings<a class="headerlink" href="#style-and-opacity-of-drawings" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="style">
+<h2>Style<a class="headerlink" href="#style" title="Permalink to this headline">¶</a></h2>
+<p>Drawings have styling properties like color, size of text or type of line. The exact set of properties depends on the tool.</p>
+<p>New drawings use the default style configured for this type of drawing.
+The default style can be changed in two ways:</p>
+<ul class="simple">
+<li><p>Open the color profile by clicking the color profile button or right clicking the viewport while the corresponding tool is active.</p></li>
+<li><p>Right click an existing drawing and use the menu <span class="menuselection">Set style as default</span>.</p></li>
+</ul>
+<img alt="../_images/colorprofile.png" src="../_images/colorprofile.png" />
+<p>To change the style of a drawing after it is created right click it and select the <span class="menuselection">Configuration</span> menu.
+This dialog also lets you change the name identifying the drawing.</p>
+<img alt="../_images/configuration.png" src="../_images/configuration.png" />
+<p>Certain tools that are presented as separate entries in the tool bar are actually style variants of each other.
+For example the presence of arrows at the end of lines is merely a style option.
+This means it is possible to convert a line into an arrow by changing the arrow style option.</p>
+</div>
+<div class="section" id="visibility">
+<h2>Visibility<a class="headerlink" href="#visibility" title="Permalink to this headline">¶</a></h2>
+<p>Drawings have visibility properties that controls their opacity throughout the video.</p>
+<img alt="../_images/visibilitymenu.png" src="../_images/visibilitymenu.png" />
+<p>New drawings start with the default opacity options set in <span class="menuselection">Options ‣ Preferences ‣ Drawings ‣ Opacity</span>.
+Each drawing can then be configured to use different visibility options.</p>
+<p>In general terms drawings have a fade-in ramp, an opaque section and a fade-out ramp.
+The default options make drawings fully visible on their key image and fade in and out of the neighboring frames.
+When drawings are tracked they stay opaque during the section of video where they are tracked.</p>
+<img alt="../_images/opacity.png" src="../_images/opacity.png" />
+<div class="section" id="always-visible">
+<h3>Always visible<a class="headerlink" href="#always-visible" title="Permalink to this headline">¶</a></h3>
+<p>With this option the drawing is visible for the entirety of the video. The opaque duration and fading duration options are ignored.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The drawing is still attached to the key image it was added to and will be deleted if that key image is deleted.</p>
+</div>
+</div>
+<div class="section" id="default-fading">
+<h3>Default fading<a class="headerlink" href="#default-fading" title="Permalink to this headline">¶</a></h3>
+<p>With this option the drawing uses the default opacity configuration set in <span class="menuselection">Options ‣ Preferences ‣ Drawings ‣ Opacity</span>.</p>
+</div>
+<div class="section" id="custom-fading">
+<h3>Custom fading<a class="headerlink" href="#custom-fading" title="Permalink to this headline">¶</a></h3>
+<p>With this option the drawing uses a custom configuration defined through the <span class="guilabel">Configure custom fading</span> dialog.</p>
+<img alt="../_images/customfading.png" src="../_images/customfading.png" />
+<p><strong>Maximum opacity (%)</strong></p>
+<p>This option controls the opacity used during the opaque section.
+A value of 100 % means the drawing will not let the background show through.
+A value less than 100 % means the drawing will be somewhat transparent.</p>
+<p><strong>Opaque duration (frames)</strong></p>
+<p>This option controls how long the drawing stays at its maximum opacity level before fading out. This section starts at the keyframe onto which the drawing was added.</p>
+<p><strong>Fading duration (frames)</strong></p>
+<p>This option controls the duration of the ramps before and after the maximum opacity until the drawing becomes completely invisible.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="time_origin.html" class="btn btn-neutral float-right" title="Time origin" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="tools.html" class="btn btn-neutral float-left" title="List of tools" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2025, MotionON documentation authors (Cited Source: Kinovea documentation Authours, Credits CC0 1.0).
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

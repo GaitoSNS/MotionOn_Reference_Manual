@@ -1,0 +1,334 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Guidelines to minimize errors &mdash; MotionON 0.9.5 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/motionon.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Coordinate system" href="coordinatesystem.html" />
+    <link rel="prev" title="Calibration mechanisms" href="calibration.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #404040" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/motionon.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">User interface</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/overview.html">Main window user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/workspaces.html">Workspaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/instances.html">Running multiple instances of MotionON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/preferences.html">Preference pages</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Observation and comparison</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../observation/loading.html">Loading videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/playback_ui.html">Playback screen user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/image_geometry.html">Image transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/time_calibration.html">Time calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/comparison.html">Comparison and synchronization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/overview.html">Overview mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/reverse.html">Reverse mode</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Annotation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/general.html">Annotating videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/tools.html">List of tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/style_and_opacity.html">Style and opacity of drawings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/time_origin.html">Time origin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/importing_images.html">Importing images and vector drawings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/annotation_files.html">Saving and loading annotation files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/importing_data.html">Importing external data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Measurement</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="calibration.html">Calibration mechanisms</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Guidelines to minimize errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coordinatesystem.html">Coordinate system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lensdistortion.html">Lens distortion calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="time.html">Measuring time</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distance.html">Measuring positions and distances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="angle.html">Measuring angles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trajectory.html">Tracking point trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tracking.html">Tracking distances and angles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics.html">Linear and angular kinematics</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Capture</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../capture/listing.html">Listing and opening cameras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capture/userinterface.html">Capture screen user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capture/hardware.html">Supported cameras and options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capture/livedelay.html">Live delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capture/recording.html">Recording</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capture/replay.html">Replay folder observers</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Export</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../export/video.html">Exporting video and images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../export/data.html">Exporting data and measurements</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellaneous topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/faq.html">Frequently asked questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/update.html">Software update</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/command_line.html">Command line options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/copydata.html">Control from other applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/comms.html">Communication channels</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MotionON</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Guidelines to minimize errors</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="guidelines-to-minimize-errors">
+<h1>Guidelines to minimize errors<a class="headerlink" href="#guidelines-to-minimize-errors" title="Permalink to this headline">¶</a></h1>
+<p>The following guidelines are designed to minimize the systematic and random errors inherent to measuring spatial motion on 2D images.</p>
+<div class="section" id="camera-setup">
+<h2>Camera setup<a class="headerlink" href="#camera-setup" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="mount-the-camera-on-a-tripod-and-avoid-camera-motion">
+<h3>Mount the camera on a tripod and avoid camera motion<a class="headerlink" href="#mount-the-camera-on-a-tripod-and-avoid-camera-motion" title="Permalink to this headline">¶</a></h3>
+<p>The camera must remain stationary for the images to provide a stable frame of reference.
+If the camera is moving relative to the scene, the plane of motion will change over time
+and the calibration from one video frame cannot be used on other frames.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you do not control the camera and it is moving, you can try to track the calibration object itself.</p>
+</div>
+</div>
+<div class="section" id="align-the-camera-plane-with-the-plane-of-motion">
+<h3>Align the camera plane with the plane of motion<a class="headerlink" href="#align-the-camera-plane-with-the-plane-of-motion" title="Permalink to this headline">¶</a></h3>
+<p>When using calibration by line the camera must be aligned with the plane of motion,
+the camera optical axis must be orthogonal to the plane of motion.</p>
+<img alt="../_images/planeofmotion.png" src="../_images/planeofmotion.png" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If the camera is not in a controlled environment use the calibration by plane.</p>
+</div>
+</div>
+<div class="section" id="maximize-the-camera-distance-to-the-scene">
+<h3>Maximize the camera distance to the scene<a class="headerlink" href="#maximize-the-camera-distance-to-the-scene" title="Permalink to this headline">¶</a></h3>
+<p>To minimize perspective distortion. place the camera as far as possible from the scene and zoom in.
+This will reduce errors due to points moving in and out of the plane of motion.</p>
+</div>
+</div>
+<div class="section" id="camera-and-digitization">
+<h2>Camera and digitization<a class="headerlink" href="#camera-and-digitization" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="minimize-or-correct-lens-distortion">
+<h3>Minimize or correct lens distortion<a class="headerlink" href="#minimize-or-correct-lens-distortion" title="Permalink to this headline">¶</a></h3>
+<p>Use a lens with as little distortion as possible to minimize the curvature of the plane of motion in the images.</p>
+<p>This distortion can be taken into account in MotionON using the lens calibration dialog.</p>
+<p>See also: <a class="reference internal" href="lensdistortion.html"><span class="doc">Lens distortion calibration</span></a>.</p>
+</div>
+<div class="section" id="use-an-appropriate-exposure-time">
+<h3>Use an appropriate exposure time<a class="headerlink" href="#use-an-appropriate-exposure-time" title="Permalink to this headline">¶</a></h3>
+<p>To minimize motion blur, decrease the exposure time as much as possible (increase shutter speed).</p>
+</div>
+<div class="section" id="maximize-image-size-and-image-quality">
+<h3>Maximize image size and image quality<a class="headerlink" href="#maximize-image-size-and-image-quality" title="Permalink to this headline">¶</a></h3>
+<p>Use the largest possible image resolution to improve the precision of the digitization process when locating points on the images.</p>
+</div>
+<div class="section" id="use-the-zoom-function">
+<h3>Use the zoom function<a class="headerlink" href="#use-the-zoom-function" title="Permalink to this headline">¶</a></h3>
+<p>Use the zoom function in MotionON to position the points more precisely.
+MotionON uses fractional pixel coordinates for calibration and measurements.</p>
+</div>
+</div>
+<div class="section" id="scene-setup">
+<h2>Scene setup<a class="headerlink" href="#scene-setup" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="use-a-large-reference-object">
+<h3>Use a large reference object<a class="headerlink" href="#use-a-large-reference-object" title="Permalink to this headline">¶</a></h3>
+<p>The scaling object used for calibration should occupy as much of the image as possible.</p>
+</div>
+<div class="section" id="use-a-vertical-or-horizontal-reference">
+<h3>Use a vertical or horizontal reference<a class="headerlink" href="#use-a-vertical-or-horizontal-reference" title="Permalink to this headline">¶</a></h3>
+<p>To align the axes of the coordinate system with the real world use a plumb line or other object of known direction as the calibration object.
+If the real world vertical line is not parallel to the image side you can set the calibration line to define the vertical axis.</p>
+</div>
+<div class="section" id="avoid-measuring-objects-outside-the-plane-of-motion">
+<h3>Avoid measuring objects outside the plane of motion<a class="headerlink" href="#avoid-measuring-objects-outside-the-plane-of-motion" title="Permalink to this headline">¶</a></h3>
+<p>Everything that is measured must sit on the calibrated plane of motion.
+Coordinates and measurements using points physically outside the plane of motion will be inaccurate.</p>
+</div>
+<div class="section" id="use-small-round-markers">
+<h3>Use small round markers<a class="headerlink" href="#use-small-round-markers" title="Permalink to this headline">¶</a></h3>
+<p>Use small markers on the object or joints.
+The markers shape should not vary when rotated, for example a disk or concentric disks should be suitable.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="coordinatesystem.html" class="btn btn-neutral float-right" title="Coordinate system" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="calibration.html" class="btn btn-neutral float-left" title="Calibration mechanisms" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2025, MotionON documentation authors (Cited Source: Kinovea documentation Authours, Credits CC0 1.0).
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

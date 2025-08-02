@@ -1,0 +1,380 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Capture screen user interface &mdash; MotionON 0.9.5 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/motionon.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Supported cameras and options" href="hardware.html" />
+    <link rel="prev" title="Listing and opening cameras" href="listing.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #404040" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/motionon.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">User interface</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/overview.html">Main window user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/workspaces.html">Workspaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/instances.html">Running multiple instances of MotionON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/preferences.html">Preference pages</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Observation and comparison</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../observation/loading.html">Loading videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/playback_ui.html">Playback screen user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/image_geometry.html">Image transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/time_calibration.html">Time calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/comparison.html">Comparison and synchronization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/overview.html">Overview mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/reverse.html">Reverse mode</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Annotation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/general.html">Annotating videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/tools.html">List of tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/style_and_opacity.html">Style and opacity of drawings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/time_origin.html">Time origin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/importing_images.html">Importing images and vector drawings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/annotation_files.html">Saving and loading annotation files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/importing_data.html">Importing external data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Measurement</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/calibration.html">Calibration mechanisms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/guidelines.html">Guidelines to minimize errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/coordinatesystem.html">Coordinate system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/lensdistortion.html">Lens distortion calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/time.html">Measuring time</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/distance.html">Measuring positions and distances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/angle.html">Measuring angles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/trajectory.html">Tracking point trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/tracking.html">Tracking distances and angles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/kinematics.html">Linear and angular kinematics</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Capture</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="listing.html">Listing and opening cameras</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Capture screen user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hardware.html">Supported cameras and options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="livedelay.html">Live delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recording.html">Recording</a></li>
+<li class="toctree-l1"><a class="reference internal" href="replay.html">Replay folder observers</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Export</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../export/video.html">Exporting video and images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../export/data.html">Exporting data and measurements</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellaneous topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/faq.html">Frequently asked questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/update.html">Software update</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/command_line.html">Command line options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/copydata.html">Control from other applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/comms.html">Communication channels</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MotionON</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Capture screen user interface</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="capture-screen-user-interface">
+<h1>Capture screen user interface<a class="headerlink" href="#capture-screen-user-interface" title="Permalink to this headline">¶</a></h1>
+<p>The capture screen is divided in the following areas:</p>
+<img alt="../_images/ui-capture.png" src="../_images/ui-capture.png" />
+<div class="section" id="camera-viewport">
+<h2>1. Camera viewport<a class="headerlink" href="#camera-viewport" title="Permalink to this headline">¶</a></h2>
+<p>The camera viewport is the main area where the camera image is visible.</p>
+<p>The image itself can be moved around by dragging with the mouse and resized using the manipulators at the corners of the image or by using <kbd class="kbd docutils literal notranslate">CTRL</kbd> + <strong>mouse scroll</strong>.
+Drawings on the capture screen can go outside the image area.</p>
+<p>If the image stays black, there might be a problem with the available USB bandwidth or power, or the exposure duration might be too short.</p>
+<p>If nothing is visible at all, not even the black image rectangle, the camera did not connect correctly; for example, the camera might be in use in another application at the same time.</p>
+</div>
+<div class="section" id="infobar">
+<h2>2. Infobar<a class="headerlink" href="#infobar" title="Permalink to this headline">¶</a></h2>
+<p>The infobar contains information about the connected camera and streaming performances.</p>
+<img alt="../_images/infobar1.png" src="../_images/infobar1.png" />
+<p>The first part of the infobar displays the alias of the camera and the current configuration for image size, frame rate and image format.
+Clicking in this area of the infobar will bring up the camera configuration dialog.</p>
+<p>The frame rate indicated is the one configured, the actual frame rate sent by the camera might be different for various reasons like low light levels or hardware limitations.</p>
+<p>The second part of the infobar displays the following live statistics:</p>
+<img alt="../_images/infobar2.png" src="../_images/infobar2.png" />
+<div class="section" id="signal-fps">
+<h3>Signal (fps)<a class="headerlink" href="#signal-fps" title="Permalink to this headline">¶</a></h3>
+<p>This is the frequency at which MotionON is receiving images from the camera. The value is in frames per second.</p>
+<p>Many cameras will reduce their frame rate based on various external factors.
+For example, when a camera uses auto-exposure and the exposure duration computed by the device is incompatible with the selected frame rate.</p>
+</div>
+<div class="section" id="throughput-mb-s">
+<h3>Throughput (MB/s)<a class="headerlink" href="#throughput-mb-s" title="Permalink to this headline">¶</a></h3>
+<p>This is the amount of data that passes through MotionON as it processes the stream. The value is in megabytes per second, with the convention of one megabyte as 1024 kilobytes.</p>
+<p>This value is related to the the image size, frame rate and format, possible on-camera image compression, link bandwidth, and possible post-processing done at the driver level.</p>
+<p>You can use this value to estimate the necessary speed for your storage medium to write the uncompressed stream.</p>
+<p>In the case of a non-compressed stream in RGB24 format, the value is calculated as follows:</p>
+<p><code class="docutils literal notranslate"><span class="pre">Throughput</span> <span class="pre">=</span> <span class="pre">(width</span> <span class="pre">×</span> <span class="pre">height</span> <span class="pre">×</span> <span class="pre">3</span> <span class="pre">×</span> <span class="pre">frame</span> <span class="pre">rate)</span> <span class="pre">/</span> <span class="pre">(1024*1024)</span></code></p>
+</div>
+<div class="section" id="load">
+<h3>Load (%)<a class="headerlink" href="#load" title="Permalink to this headline">¶</a></h3>
+<p>This value describes how much MotionON is struggling to keep up with the camera framerate.
+It is computed as the time taken to process one frame divided by the interval between frames.</p>
+<p>When this value is near 100% it means it takes MotionON the same amount of time to process one frame as the time budget it has for that frame, if it goes over 100% dropped frames may occur.</p>
+</div>
+<div class="section" id="drops">
+<h3>Drops<a class="headerlink" href="#drops" title="Permalink to this headline">¶</a></h3>
+<p>This is the number of frames that could not be processed by MotionON during the current or last recording session.</p>
+<p>If this value is non-zero, some frames are missing from the output video and any measurements involving time will not be perfectly accurate.</p>
+</div>
+</div>
+<div class="section" id="toolbar">
+<h2>3. Toolbar<a class="headerlink" href="#toolbar" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/toolbar1.png" src="../_images/toolbar1.png" />
+<p>The toolbar contains drawing tools usable on the capture screen. Some tools available in the playback screen are not available in the capture screen.</p>
+<p>Some buttons may give access to multiple tools. To access the other tools, right click the button or perform a long press on the button.</p>
+<p>The style profile dialog is not currently accessible in the capture screen, in order to change the default style of a tool you need to open a playback screen and change it from there.</p>
+</div>
+<div class="section" id="list-of-recently-captured-files">
+<h2>4. List of recently captured files<a class="headerlink" href="#list-of-recently-captured-files" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/capturedfiles.png" src="../_images/capturedfiles.png" />
+<p>This area displays thumbnails of the recently captured files.</p>
+<p>Double clicking on a thumbnail opens the file in a playback screen. The close button removes the thumbnail from the list without deleting the file.</p>
+<p>Right-clicking on a thumbnails brings a context menu with the following options:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 42%" />
+<col style="width: 58%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><img alt="Open" src="../_images/open.png" /> Open</p></td>
+<td><p>Opens the video in a playback screen.</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="OpenAsReplay" src="../_images/replaywatcher.png" /> Open as replay folder observer</p></td>
+<td><p>Opens the parent folder of the video in a replay folder observer.</p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="Locate" src="../_images/folder_new.png" /> Locate file in Windows Explorer</p></td>
+<td><p>Opens the Windows Explorer on the parent folder of the video.</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="Rename" src="../_images/rename.png" /> Rename</p></td>
+<td><p>Make the file name label editable and save the new file name.</p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="Hide" src="../_images/hide.png" /> Hide</p></td>
+<td><p>Removes this thumbnail from the list without deleting the file.</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="Delete" src="../_images/delete.png" /> Delete</p></td>
+<td><p>Sends the file to the Windows trash.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="capture-controls">
+<h2>5. Capture controls<a class="headerlink" href="#capture-controls" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/capturecontrols.png" src="../_images/capturecontrols.png" />
+<p>The capture controls area contains the following buttons:</p>
+<p><img alt="Configure" src="../_images/settings.png" /> <em>Configure camera</em></p>
+<p>Displays the camera configuration dialog to change options like image size or frame rate.
+The available options depend on the specific camera brand and model.</p>
+<p><img alt="Pause" src="../_images/grab_pause.png" /> <em>Pause camera</em></p>
+<p>Pauses or restarts the camera stream. This disconnects the camera.
+When the camera is disconnected, it is possible to review the last few seconds of action seen by the camera by adjusting the delay.</p>
+<p><img alt="Disarm" src="../_images/speaker.png" /> <em>Disarm capture trigger</em></p>
+<p>Disarms or rearms the audio capture trigger. When the audio trigger is disarmed, audio levels will not be monitored and capture will not be automatically started.
+The microphone and audio level threshold can be configured from <span class="menuselection">Options ‣ Preferences ‣ Capture ‣ Automation</span>.</p>
+<p><img alt="SaveImage" src="../_images/camerasingle.png" /> <em>Save image</em></p>
+<p>Saves the image currently displayed to an image file based on the configured file name and saving directory.
+The saving directory can be configured from <span class="menuselection">Options ‣ Preferences ‣ Capture ‣ Image naming</span>.</p>
+<p><img alt="Record" src="../_images/control_rec.png" /> <em>Start recording video</em></p>
+<p>Starts or stops recording the video. The video is recorded based on the compression options, recording mode, and naming options found under <span class="menuselection">Options ‣ Preferences ‣ Capture</span>.</p>
+</div>
+<div class="section" id="delay-controls">
+<h2>6. Delay controls<a class="headerlink" href="#delay-controls" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/delaycontrols.png" src="../_images/delaycontrols.png" />
+<p>The delay controls let you adjust the amount of delay, in seconds, of the displayed camera stream with regards to the real time action.</p>
+<p>The maximum amount of delay depends on the camera configuration — hardware compression, image format, image size, frame rate — and the memory allocated in the delay cache under <span class="menuselection">Options ‣ Preferences ‣ Capture ‣ Memory</span>.</p>
+</div>
+<div class="section" id="output-file-names">
+<h2>7. Output file names<a class="headerlink" href="#output-file-names" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/filenames.png" src="../_images/filenames.png" />
+<p>These fields define the names of the next files that will be saved when exporting an image or capturing a video.
+They are automatically updated after each recording but can also be modified manually.</p>
+<p>The file names can use macros like the current date or the name of the camera.
+The list of available macros and configuration options can be found under <span class="menuselection">Options ‣ Preferences ‣ Capture ‣ Image naming</span> and <span class="menuselection">Options ‣ Preferences ‣ Capture ‣ Video naming</span>.</p>
+<p>Clicking on the folder buttons will open the main preferences dialog on the relevant page.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="hardware.html" class="btn btn-neutral float-right" title="Supported cameras and options" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="listing.html" class="btn btn-neutral float-left" title="Listing and opening cameras" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2025, MotionON documentation authors (Cited Source: Kinovea documentation Authours, Credits CC0 1.0).
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

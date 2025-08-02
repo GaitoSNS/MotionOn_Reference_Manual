@@ -1,0 +1,368 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Measuring time &mdash; MotionON 0.9.5 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/motionon.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Measuring positions and distances" href="distance.html" />
+    <link rel="prev" title="Lens distortion calibration" href="lensdistortion.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #404040" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/motionon.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">User interface</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/overview.html">Main window user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/workspaces.html">Workspaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/instances.html">Running multiple instances of MotionON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/preferences.html">Preference pages</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Observation and comparison</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../observation/loading.html">Loading videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/playback_ui.html">Playback screen user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/image_geometry.html">Image transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/time_calibration.html">Time calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/comparison.html">Comparison and synchronization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/overview.html">Overview mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../observation/reverse.html">Reverse mode</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Annotation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/general.html">Annotating videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/tools.html">List of tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/style_and_opacity.html">Style and opacity of drawings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/time_origin.html">Time origin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/importing_images.html">Importing images and vector drawings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/annotation_files.html">Saving and loading annotation files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/importing_data.html">Importing external data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Measurement</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="calibration.html">Calibration mechanisms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guidelines.html">Guidelines to minimize errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coordinatesystem.html">Coordinate system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lensdistortion.html">Lens distortion calibration</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Measuring time</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distance.html">Measuring positions and distances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="angle.html">Measuring angles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trajectory.html">Tracking point trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tracking.html">Tracking distances and angles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics.html">Linear and angular kinematics</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Capture</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../capture/listing.html">Listing and opening cameras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capture/userinterface.html">Capture screen user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capture/hardware.html">Supported cameras and options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capture/livedelay.html">Live delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capture/recording.html">Recording</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capture/replay.html">Replay folder observers</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Export</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../export/video.html">Exporting video and images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../export/data.html">Exporting data and measurements</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellaneous topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/faq.html">Frequently asked questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/update.html">Software update</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/command_line.html">Command line options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/copydata.html">Control from other applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/comms.html">Communication channels</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MotionON</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Measuring time</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="measuring-time">
+<h1>Measuring time<a class="headerlink" href="#measuring-time" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="time-position">
+<h2>Time position<a class="headerlink" href="#time-position" title="Permalink to this headline">¶</a></h2>
+<p>The current time position is visible under the main timeline.</p>
+<img alt="../_images/timeposition.png" src="../_images/timeposition.png" />
+</div>
+<div class="section" id="time-unit">
+<h2>Time unit<a class="headerlink" href="#time-unit" title="Permalink to this headline">¶</a></h2>
+<p>The time unit can be changed from the menu <span class="menuselection">Options ‣ Time</span> or from <span class="menuselection">Options ‣ Preferences ‣ Playback ‣ Units ‣ Time</span>.
+The following options are available:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 41%" />
+<col style="width: 18%" />
+<col style="width: 41%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Format</p></th>
+<th class="head"><p>Example</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>[h:][mm:]ss.xx[x]</p></td>
+<td><p>1:10.48</p></td>
+<td><p>Textual timecode.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Frame number</p></td>
+<td><p>1762</p></td>
+<td><p>Rank of the current frame.</p></td>
+</tr>
+<tr class="row-even"><td><p>Total milliseconds</p></td>
+<td><p>70480 ms</p></td>
+<td><p>Integer number of milliseconds.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Total microseconds</p></td>
+<td><p>1284 µs</p></td>
+<td><p>Integer number of microseconds.</p></td>
+</tr>
+<tr class="row-even"><td><p>Ten thousandth of an hour</p></td>
+<td><p>904</p></td>
+<td><p>Ten thousandths of an hour</p></td>
+</tr>
+<tr class="row-odd"><td><p>Hundredth of a minute</p></td>
+<td><p>542</p></td>
+<td><p>Hundredths of a minute</p></td>
+</tr>
+<tr class="row-even"><td><p>[h:][mm:]ss.xx[x] + Frame number</p></td>
+<td><p>1:10.48 (1762)</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The configured time unit is used for the time position and duration, the clock and stopwatch tools, and when exporting to spreadsheets.
+The kinematics dialog always uses total milliseconds as the time unit.</p>
+</div>
+</div>
+<div class="section" id="time-origin">
+<h2>Time origin<a class="headerlink" href="#time-origin" title="Permalink to this headline">¶</a></h2>
+<p>Times displayed are relative to the time origin defined for the video.
+By default the time origin is at the begining of the video but you can change it
+in order to display times relative to a particular event of the video; such as a ball impact,
+a jump take-off, a release point, a race start, etc.</p>
+<p>Video positions before the time origin have negative times.</p>
+<img alt="../_images/negativetime.png" src="../_images/negativetime.png" />
+<p>The time origin can be changed manually by using the time origin button <img alt="Timeorigin" src="../_images/timeorigin.png" /> or by right clicking the image and selecting <span class="menuselection">Mark current time as time origin</span>.
+The current video frame becomes the time origin.</p>
+</div>
+<div class="section" id="relative-clock">
+<h2>Relative clock<a class="headerlink" href="#relative-clock" title="Permalink to this headline">¶</a></h2>
+<p>To annotate the video with the current video time use the clock tool <img alt="Clock" src="../_images/clock-frame.png" />.</p>
+<img alt="../_images/toolclock.png" src="../_images/toolclock.png" />
+<p>By default a clock object simply displays the current video time using the global time origin.
+Each clock tool may also have its own custom time origin independent from the global one.
+To define a custom time origin Right click the clock tool and choose <span class="menuselection">Mark current time as time origin for this clock</span>.</p>
+<img alt="../_images/relativeclock.png" src="../_images/relativeclock.png" />
+<p>The clock object can be identified by name by using the <span class="menuselection">Show label</span> menu and changing the object name in its configuration dialog.</p>
+</div>
+<div class="section" id="time-intervals">
+<h2>Time intervals<a class="headerlink" href="#time-intervals" title="Permalink to this headline">¶</a></h2>
+<p>To measure a time interval use the Stopwatch tool <img alt="Stopwatch" src="../_images/stopwatch1.png" />.</p>
+<img alt="../_images/toolstopwatch.png" src="../_images/toolstopwatch.png" />
+<p>To measure the time elapsed between two points of the video follow these steps:</p>
+<ul class="simple">
+<li><p>Add a stopwatch object to the video.</p></li>
+<li><p>Move to the start of the interval, right click the stopwatch object and choose <span class="menuselection">Start the stopwatch</span>.</p></li>
+<li><p>Move to the end of the interval, right click the stopwatch object and choose <span class="menuselection">Stop the stopwatch</span>.</p></li>
+</ul>
+<img alt="../_images/stopwatch2.png" src="../_images/stopwatch2.png" />
+<p>In order to measure multiple time intervals you must add several stopwatch objects.</p>
+</div>
+<div class="section" id="time-scale">
+<h2>Time scale<a class="headerlink" href="#time-scale" title="Permalink to this headline">¶</a></h2>
+<p>Videos filmed with high speed cameras or in high speed mode can have a video frame rate different from the capture frame rate.
+For example a video filmed at 1000 fps is typically saved with a “standard” playback rate of 30 fps.
+This makes the final video appear in slow motion even when the speed slider is set to 1x.</p>
+<p>In this case it is important to tell MotionON about the original capture frame rate for times to be correct.
+This impacts time positions and time intervals.</p>
+<p>Open the video timing dialog from menu <span class="menuselection">Video ‣ Configure video timing…</span>
+and in the top part of the dialog, enter the capture frame rate.</p>
+<img alt="../_images/timescale.png" src="../_images/timescale.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When capturing videos with MotionON this option is automatically set based on information found in the KVA file saved next to the recording.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="distance.html" class="btn btn-neutral float-right" title="Measuring positions and distances" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="lensdistortion.html" class="btn btn-neutral float-left" title="Lens distortion calibration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2025, MotionON documentation authors (Cited Source: Kinovea documentation Authours, Credits CC0 1.0).
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

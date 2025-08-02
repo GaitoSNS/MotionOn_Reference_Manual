@@ -1,0 +1,364 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Playback screen user interface &mdash; MotionON 0.9.5 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/motionon.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Image transformation" href="image_geometry.html" />
+    <link rel="prev" title="Loading videos" href="loading.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #404040" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/motionon.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">User interface</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/overview.html">Main window user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/workspaces.html">Workspaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/instances.html">Running multiple instances of MotionON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userinterface/preferences.html">Preference pages</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Observation and comparison</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="loading.html">Loading videos</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Playback screen user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="image_geometry.html">Image transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="time_calibration.html">Time calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="comparison.html">Comparison and synchronization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reverse.html">Reverse mode</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Annotation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/general.html">Annotating videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/tools.html">List of tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/style_and_opacity.html">Style and opacity of drawings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/time_origin.html">Time origin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/importing_images.html">Importing images and vector drawings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/annotation_files.html">Saving and loading annotation files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotation/importing_data.html">Importing external data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Measurement</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/calibration.html">Calibration mechanisms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/guidelines.html">Guidelines to minimize errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/coordinatesystem.html">Coordinate system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/lensdistortion.html">Lens distortion calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/time.html">Measuring time</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/distance.html">Measuring positions and distances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/angle.html">Measuring angles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/trajectory.html">Tracking point trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/tracking.html">Tracking distances and angles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measurement/kinematics.html">Linear and angular kinematics</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Capture</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../capture/listing.html">Listing and opening cameras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capture/userinterface.html">Capture screen user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capture/hardware.html">Supported cameras and options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capture/livedelay.html">Live delay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capture/recording.html">Recording</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capture/replay.html">Replay folder observers</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Export</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../export/video.html">Exporting video and images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../export/data.html">Exporting data and measurements</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellaneous topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/faq.html">Frequently asked questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/update.html">Software update</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/command_line.html">Command line options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/copydata.html">Control from other applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/comms.html">Communication channels</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MotionON</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Playback screen user interface</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="playback-screen-user-interface">
+<h1>Playback screen user interface<a class="headerlink" href="#playback-screen-user-interface" title="Permalink to this headline">¶</a></h1>
+<p>The playback screen is divided in the following areas:</p>
+<img alt="../_images/ui-playback.png" src="../_images/ui-playback.png" />
+<div class="section" id="image-viewport">
+<h2>1. Image viewport<a class="headerlink" href="#image-viewport" title="Permalink to this headline">¶</a></h2>
+<p>The image viewport is the main area where the video is played back.</p>
+<p>Double clicking the image maximizes it in the viewport area.
+The handles at the four corners of the image can be used to change its size.</p>
+</div>
+<div class="section" id="infobar">
+<h2>2. Infobar<a class="headerlink" href="#infobar" title="Permalink to this headline">¶</a></h2>
+<p>The infobar contains the name of the file, the image size and the frame rate.</p>
+<p>The file name can be clicked to access a context menu to switch between normal video mode and replay folder observer mode.</p>
+<img alt="../_images/menuobserver.png" src="../_images/menuobserver.png" />
+</div>
+<div class="section" id="drawings-toolbar">
+<h2>3. Drawings toolbar<a class="headerlink" href="#drawings-toolbar" title="Permalink to this headline">¶</a></h2>
+<p>The drawings toolbar contains buttons to create new key images, select the active tool and open the color profile.</p>
+<img alt="../_images/toolbar.png" src="../_images/toolbar.png" />
+<p>The toolbar contains more tools than those immediately visible.
+Buttons that host extra tools have a little black triangle in the top-left corner.
+The extra tools can be accessed by right-clicking or long-clicking the primary button.</p>
+<img alt="../_images/subtools.png" src="../_images/subtools.png" />
+</div>
+<div class="section" id="working-zone-area">
+<h2>4. Working zone area<a class="headerlink" href="#working-zone-area" title="Permalink to this headline">¶</a></h2>
+<p>The working zone defines the segment of the video that the player is working with.
+The play head loops within the working zone.</p>
+<img alt="../_images/workingzone.png" src="../_images/workingzone.png" />
+<p><img alt="TimeOrigin" src="../_images/timeorigin1.png" /> Marks the current time as the time origin. This makes time values relative to this moment.</p>
+<p><img alt="WZLock" src="../_images/wz_lock.png" /> Locks the working zone start and end point to avoid changing them by mistake.</p>
+<p><img alt="WZStart" src="../_images/wz_left.png" /> Sets the starting point of the working zone within the video.</p>
+<p><img alt="WZEnd" src="../_images/wz_right.png" /> Sets the ending point of the working zone within the video.</p>
+<p><img alt="WZReset" src="../_images/wz_reset.png" /> Resets the working zone to the whole video.</p>
+<p>You can also update the working zone boundaries by directly manipulating the blue end points.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If the amount of data fits in the cache memory, the working zone will be loaded in memory.</p>
+<p>This improves playback performances and enables the <span class="menuselection">Video ‣ Overview</span> and <span class="menuselection">Video ‣ Reverse</span> menus.
+The cache memory can be configured under <span class="menuselection">Options ‣ Preferences ‣ Playback ‣ Memory</span>.</p>
+</div>
+</div>
+<div class="section" id="timeline-area">
+<h2>5. Timeline area<a class="headerlink" href="#timeline-area" title="Permalink to this headline">¶</a></h2>
+<p>The timeline area displays the current position within the video, time markers and the speed control.</p>
+<img alt="../_images/timeline.png" src="../_images/timeline.png" />
+<div class="section" id="time-markers">
+<h3>Time markers<a class="headerlink" href="#time-markers" title="Permalink to this headline">¶</a></h3>
+<p>Time markers are the colored rectangles inside the timeline gutter, they provide information about annotations.
+They use the following color coding:</p>
+<ul class="simple">
+<li><p>Red: the time origin.</p></li>
+<li><p>Green: a key image.</p></li>
+<li><p>Blue: a chronometer.</p></li>
+<li><p>Purple: a trajectory.</p></li>
+</ul>
+</div>
+<div class="section" id="speed-control">
+<h3>Speed control<a class="headerlink" href="#speed-control" title="Permalink to this headline">¶</a></h3>
+<p>The speed slider goes from 0 to twice the nominal speed of the video.</p>
+<p>The displayed speed value takes into account the slow motion factor configured such that the speed is shown as a percentage of the real world action speed.
+For example if a video is filmed at 240 fps and saved into a file as 24 fps, the video will normally play back at 10% of the real world speed.
+In this case the speed control will go from 0 to 20% with a mid-point at 10%.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If the video cannot be played back at its nominal speed for performance reasons the playback speed value will automatically be lowered down.</p>
+<p>Performance for playing back depends on the displayed image size, the frame rate and the file format.</p>
+</div>
+</div>
+</div>
+<div class="section" id="playback-controls">
+<h2>6. Playback controls<a class="headerlink" href="#playback-controls" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/playbackcontrols.png" src="../_images/playbackcontrols.png" />
+<p>From left to right the buttons provides the following functions:</p>
+<ul class="simple">
+<li><p>Returns to the start of the video or working zone.</p></li>
+<li><p>Goes back one frame.</p></li>
+<li><p>Starts playback.</p></li>
+<li><p>Goes forward one frame.</p></li>
+<li><p>Goes to the end of the video or working zone.</p></li>
+</ul>
+<p>The playback loops to the start when it reaches the end of the video or working zone.</p>
+<div class="section" id="navigation">
+<h3>Navigation<a class="headerlink" href="#navigation" title="Permalink to this headline">¶</a></h3>
+<p>It is also possible to move in the video using the following shortcuts:</p>
+<ul class="simple">
+<li><p>Use the <strong>mouse wheel</strong> to move forward and backward.</p></li>
+<li><p>Use the <kbd class="kbd docutils literal notranslate">←</kbd> and <kbd class="kbd docutils literal notranslate">→</kbd> arrow keys on the keyboard to move frame by frame.</p></li>
+<li><p>Use the <kbd class="kbd docutils literal notranslate">↟</kbd> (Page up) and <kbd class="kbd docutils literal notranslate">↡</kbd> (Page down) keys to jump 10% forward.</p></li>
+<li><p>Use the <kbd class="kbd docutils literal notranslate">⇱</kbd> (Home) and <kbd class="kbd docutils literal notranslate">⇲</kbd> (End) keys to jump to the start and end.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="export-controls">
+<h2>7. Export controls<a class="headerlink" href="#export-controls" title="Permalink to this headline">¶</a></h2>
+<p>The export controls provide ways to export videos and images of the current file.</p>
+<img alt="../_images/exportcontrols.png" src="../_images/exportcontrols.png" />
+<p>See also: <a class="reference internal" href="../export/video.html"><span class="doc">Exporting video and images</span></a>.</p>
+</div>
+<div class="section" id="context-menu">
+<h2>8. Context menu<a class="headerlink" href="#context-menu" title="Permalink to this headline">¶</a></h2>
+<p>The context menu provides quick access to more functions.</p>
+<img alt="../_images/contextmenu.png" src="../_images/contextmenu.png" />
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="image_geometry.html" class="btn btn-neutral float-right" title="Image transformation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="loading.html" class="btn btn-neutral float-left" title="Loading videos" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2025, MotionON documentation authors (Cited Source: Kinovea documentation Authours, Credits CC0 1.0).
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
